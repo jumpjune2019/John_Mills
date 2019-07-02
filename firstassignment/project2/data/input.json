@@ -1,0 +1,103 @@
+{
+	"key1": {
+		"term": "Montgomery",
+		"definition": "What is the captial of Alabama?"
+	},
+	"key2": {
+		"term": "Austin",
+		"definition": "What is the captial of Texas?"
+	},
+	"key3": {
+		"term": "Nashville",
+		"definition": "What is the captial of Tennessee?"
+	},
+	"key4": {
+		"term": "Jackson",
+		"definition": "What is the captial of Mississippi?"
+	},
+	"key5": {
+		"term": "Atlanta",
+		"definition": "What is the captial of Georgia?"
+	},
+	"key6": {
+		"term": "Juneau",
+		"definition": "What is the captial of Alaska?"
+	},
+	"key7": {
+		"term": "Phoenix",
+		"definition": "What is the captial of Arizona?"
+	},
+	"key8": {
+		"term": "Sacramento",
+		"definition": "What is the captial of California?"
+	},
+	"key9": {
+		"term": "Denver",
+		"definition": "What is the captial of Colorado?"
+	},
+	"key10": {
+		"term": "Dover",
+		"definition": "What is the captial of Delaware?"
+	},
+	"key11": {
+		"term": "Tallahassee",
+		"definition": "What is the captial of Florida?"
+	},
+	"key12": {
+		"term": "Honolulu",
+		"definition": "What is the captial of Hawaii?"
+	},
+	"key13": {
+		"term": "Boise",
+		"definition": "What is the captial of Idaho?"
+	},
+	"key14": {
+		"term": "Springfield",
+		"definition": "What is the captial of Illinois?"
+	},
+	"key15": {
+		"term": "Des Moines",
+		"definition": "What is the captial of Iowa?"
+	},
+	"key16": {
+		"term": "Topeka",
+		"definition": "What is the captial of Kansas?"
+	},
+	"key17": {
+		"term": "Frankfort",
+		"definition": "What is the captial of Kentucky?"
+	},
+	"key18": {
+		"term": "Baton Rouge",
+		"definition": "What is the captial of Louisiana?"
+	},
+	"key19": {
+		"term": "Lansing",
+		"definition": "What is the captial of Michigan?"
+	},
+	"key20": {
+		"term": "Saint Paul",
+		"definition": "What is the captial of Minnesota?"
+	},
+	"key21": {
+		"term": "Trenton",
+		"definition": "What is the captial of New Jersey?"
+	},
+	"key22": {
+		"term": "Santa Fe",
+		"definition": "What is the captial of New Mexico?"
+	},
+	"key23": {
+		"term": "Raleigh",
+		"definition": "What is the captial of North Carolina?"
+	},
+	"key24": {
+		"term": "Bismarck",
+		"definition": "What is the captial of North Dakota?"
+	},
+	"key25": {
+		"term": "Albany",
+		"definition": "What is the captial of New York?"
+	}
+
+}
