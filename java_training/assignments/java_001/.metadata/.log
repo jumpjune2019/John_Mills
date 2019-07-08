@@ -1,0 +1,584 @@
+!SESSION 2019-07-07 20:40:01.596 -----------------------------------------------
+eclipse.buildId=4.3.0.201906200901-RELEASE
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -data C:\java_training\assignments\java_001 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2019-07-07 20:40:04.514
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-07-07 20:40:05.490
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-07-07 20:40:05.490
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@728535c6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@244f356,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-07-07 20:40:10.173
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jgmil'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2019-07-07 20:52:07.204
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:52.102
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:52.105
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@67954d71[org.springframework.tooling.boot.ls:1.8.0.201906200642(id=624)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:52.108
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:52.169
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.931
+!MESSAGE Boot LS startup time from start to initialized: 2805ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.954
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UBfnGQNjisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.957
+!MESSAGE subscribing to classpath changes: sts4.classpath.UBfnGQNj isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.960
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.964
+!MESSAGE subsribers = {sts4.classpath.UBfnGQNj=Send Classpath Notifications(108)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.966
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.970
+!MESSAGE project Assignment01_HeadOrTail ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.973
+!MESSAGE Preparing classpath changed notification Assignment01_HeadOrTail
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.974
+!MESSAGE project Assignment02_HeadOrTailTally ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.976
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.977
+!MESSAGE project Assignment03_SimpleDie ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.979
+!MESSAGE project Assignment04_PairOfDice ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.981
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.983
+!MESSAGE project Assignment05_DicePairStats ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.984
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment01_HeadOrTail false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.986
+!MESSAGE project Assignment06_DiceLabels ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.987
+!MESSAGE Preparing classpath changed notification Assignment02_HeadOrTailTally
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.989
+!MESSAGE project Assignment07_GameOfDice ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.991
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.992
+!MESSAGE project Assignment08_StringArrayUtilities ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.994
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.995
+!MESSAGE project Assignment09_StringArrayUtilities2 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.997
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment02_HeadOrTailTally false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.998
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:54.999
+!MESSAGE Preparing classpath changed notification Assignment03_SimpleDie
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.000
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UBfnGQNj => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.002
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.005
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.007
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment03_SimpleDie false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.009
+!MESSAGE Preparing classpath changed notification Assignment04_PairOfDice
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.010
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.012
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.013
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment04_PairOfDice false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.015
+!MESSAGE Preparing classpath changed notification Assignment05_DicePairStats
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.016
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.018
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.019
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment05_DicePairStats false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.021
+!MESSAGE Preparing classpath changed notification Assignment06_DiceLabels
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.022
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.024
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.026
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment06_DiceLabels false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.028
+!MESSAGE Preparing classpath changed notification Assignment07_GameOfDice
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.030
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.033
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.034
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment07_GameOfDice false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.036
+!MESSAGE Preparing classpath changed notification Assignment08_StringArrayUtilities
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.038
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.040
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.041
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment08_StringArrayUtilities false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.043
+!MESSAGE Preparing classpath changed notification Assignment09_StringArrayUtilities2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.044
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.047
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.048
+!MESSAGE buffering callback sts4.classpath.UBfnGQNj Assignment09_StringArrayUtilities2 false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.049
+!MESSAGE executing callback sts4.classpath.UBfnGQNj 9 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:04:55.107
+!MESSAGE executing callback sts4.classpath.UBfnGQNj SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:17:36.367
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UBfnGQNj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:17:36.369
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.UBfnGQNj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:17:36.370
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:17:36.372
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UBfnGQNj => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.423
+!MESSAGE Boot LS startup time from start to initialized: 2069ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.452
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.GgVbrtDYisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.455
+!MESSAGE subscribing to classpath changes: sts4.classpath.GgVbrtDY isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.456
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.458
+!MESSAGE subsribers = {sts4.classpath.GgVbrtDY=Send Classpath Notifications(317)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.459
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.462
+!MESSAGE project Assignment04_PairOfDice ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.463
+!MESSAGE Preparing classpath changed notification Assignment04_PairOfDice
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.465
+!MESSAGE project Assignment01_HeadOrTail ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.466
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.468
+!MESSAGE project Assignment02_HeadOrTailTally ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.469
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.471
+!MESSAGE project Assignment03_SimpleDie ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.472
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment04_PairOfDice false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.474
+!MESSAGE project Assignment05_DicePairStats ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.475
+!MESSAGE Preparing classpath changed notification Assignment01_HeadOrTail
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.476
+!MESSAGE project Assignment06_DiceLabels ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.478
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.479
+!MESSAGE project Assignment07_GameOfDice ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.481
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.482
+!MESSAGE project Assignment08_StringArrayUtilities ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.484
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment01_HeadOrTail false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.485
+!MESSAGE project Assignment09_StringArrayUtilities2 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.486
+!MESSAGE Preparing classpath changed notification Assignment02_HeadOrTailTally
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.488
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.489
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.490
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.GgVbrtDY => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.491
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.492
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment02_HeadOrTailTally false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.494
+!MESSAGE Preparing classpath changed notification Assignment03_SimpleDie
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.495
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.497
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.498
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment03_SimpleDie false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.499
+!MESSAGE Preparing classpath changed notification Assignment05_DicePairStats
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.500
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.501
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.502
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment05_DicePairStats false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.503
+!MESSAGE Preparing classpath changed notification Assignment06_DiceLabels
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.505
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.506
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.507
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment06_DiceLabels false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.508
+!MESSAGE Preparing classpath changed notification Assignment07_GameOfDice
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.510
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.511
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.512
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment07_GameOfDice false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.513
+!MESSAGE Preparing classpath changed notification Assignment08_StringArrayUtilities
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.514
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.516
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.517
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment08_StringArrayUtilities false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.518
+!MESSAGE Preparing classpath changed notification Assignment09_StringArrayUtilities2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.519
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.520
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.521
+!MESSAGE buffering callback sts4.classpath.GgVbrtDY Assignment09_StringArrayUtilities2 false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.522
+!MESSAGE executing callback sts4.classpath.GgVbrtDY 9 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:18:28.572
+!MESSAGE executing callback sts4.classpath.GgVbrtDY SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:19:57.834
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GgVbrtDY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:19:57.836
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.GgVbrtDY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:19:57.838
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:19:57.839
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GgVbrtDY => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.232
+!MESSAGE Boot LS startup time from start to initialized: 2062ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.252
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.YplOGLCSisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.253
+!MESSAGE subscribing to classpath changes: sts4.classpath.YplOGLCS isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.255
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.258
+!MESSAGE subsribers = {sts4.classpath.YplOGLCS=Send Classpath Notifications(382)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.260
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.262
+!MESSAGE project Assignment06_DiceLabels ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.264
+!MESSAGE Preparing classpath changed notification Assignment06_DiceLabels
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.265
+!MESSAGE project Assignment01_HeadOrTail ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.266
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.268
+!MESSAGE project Assignment02_HeadOrTailTally ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.269
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.271
+!MESSAGE project Assignment03_SimpleDie ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.272
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment06_DiceLabels false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.273
+!MESSAGE project Assignment04_PairOfDice ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.275
+!MESSAGE Preparing classpath changed notification Assignment01_HeadOrTail
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.277
+!MESSAGE project Assignment05_DicePairStats ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.278
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.279
+!MESSAGE project Assignment07_GameOfDice ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.281
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.282
+!MESSAGE project Assignment08_StringArrayUtilities ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.283
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment01_HeadOrTail false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.285
+!MESSAGE project Assignment09_StringArrayUtilities2 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.286
+!MESSAGE Preparing classpath changed notification Assignment02_HeadOrTailTally
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.287
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.288
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.289
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.YplOGLCS => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.290
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.292
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment02_HeadOrTailTally false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.294
+!MESSAGE Preparing classpath changed notification Assignment03_SimpleDie
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.295
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.296
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.298
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment03_SimpleDie false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.299
+!MESSAGE Preparing classpath changed notification Assignment04_PairOfDice
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.300
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.302
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.303
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment04_PairOfDice false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.305
+!MESSAGE Preparing classpath changed notification Assignment05_DicePairStats
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.306
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.307
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.308
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment05_DicePairStats false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.309
+!MESSAGE Preparing classpath changed notification Assignment07_GameOfDice
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.310
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.311
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.312
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment07_GameOfDice false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.313
+!MESSAGE Preparing classpath changed notification Assignment08_StringArrayUtilities
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.314
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.315
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.316
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment08_StringArrayUtilities false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.317
+!MESSAGE Preparing classpath changed notification Assignment09_StringArrayUtilities2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.318
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.319
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.320
+!MESSAGE buffering callback sts4.classpath.YplOGLCS Assignment09_StringArrayUtilities2 false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.321
+!MESSAGE executing callback sts4.classpath.YplOGLCS 9 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 21:20:30.370
+!MESSAGE executing callback sts4.classpath.YplOGLCS SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 22:25:18.467
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.YplOGLCS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 22:25:18.469
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.YplOGLCS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 22:25:18.470
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-07 22:25:18.471
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.YplOGLCS => OK
