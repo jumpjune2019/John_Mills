@@ -1,0 +1,19 @@
+package phone;
+import java.io.*;
+
+public class MyException extends Exception {
+
+	public MyException() {
+		super();
+		System.out.println("Do not leave any field blank");
+	}
+
+	
+	public String newMessage(BufferedReader br) throws IOException {
+		
+		
+		return "";
+	}
+	
+	
+}//end MyException

@@ -1,0 +1,21 @@
+package compare;
+import java.io.*;
+
+
+public class CompareFile {
+
+	public static void main(String[] args) {
+	
+		
+		try(FileInputStream f1 = new FileInputStream(args[0])){
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}//end main
+	
+	
+}//end CompareFile

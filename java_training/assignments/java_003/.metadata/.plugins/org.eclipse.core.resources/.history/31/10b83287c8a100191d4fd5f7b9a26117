@@ -1,0 +1,9 @@
+package matrixcustomhandlers;
+
+public class InvalidValueException extends Exception{
+
+	public InvalidValueException() {
+		System.out.println("That is  not 1-6 for the matrix");
+	}
+	
+}

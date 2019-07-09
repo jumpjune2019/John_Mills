@@ -1,0 +1,10 @@
+package matrixcustomhandlers;
+
+public class InvalidValueException extends Exception{
+
+	public InvalidValueException() {
+		System.out.println("THAT ISNT 1, 2, OR 3");
+	}
+	
+	
+}

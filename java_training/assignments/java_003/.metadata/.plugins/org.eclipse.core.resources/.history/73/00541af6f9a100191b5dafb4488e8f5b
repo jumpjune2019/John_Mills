@@ -1,0 +1,123 @@
+package phone;
+import java.util.*;
+import java.io.*;
+
+public class MyPhone{
+	
+	public static void main(String[] args) {
+		
+		String input;
+		FileWriter fout = null;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String phoneBook[][] = new String[3][5];
+		
+		
+		try {
+			
+			fout = new FileWriter("C:\\java_training\\assignments\\java_003\\phone\\phone.txt");
+			
+			for(int i=0; i < 5; i++){
+				System.out.println("Enter a name and press enter:");
+				
+				
+				phoneBook[0][i] = br.readLine();
+				if(phoneBook[0][i].charAt(0) == '\\n') {
+					System.out.println("Asdsadsa");
+				}
+				if(isEmpty(phoneBook, 0, i)) {
+					throw new MyException();
+				}
+				
+				
+				//input = br.readLine();
+				System.out.println("Enter your phone number and press enter:");
+				phoneBook[1][i] = br.readLine();
+				//input = br.readLine();
+				System.out.println("Enter your city: ");
+				phoneBook[2][i] = br.readLine();
+				//input = br.readLine();
+			}//end for loop
+			
+			printToScreen(phoneBook);
+			printToFile(fout, phoneBook);
+			
+			
+		}catch(IOException e){
+			System.out.println("ERR: " + e.getMessage());
+		}catch (MyException e) {
+			System.out.println("Whats gonna happen");
+		}
+		
+		
+	}//end main
+	
+	public static void printToScreen(String[][] myArr) {
+
+		System.out.format("%-20s", "Name");
+		System.out.format("%-20s", "Phone");
+		System.out.format("%-20s", "City");
+		System.out.println();
+		
+		for(int i=0; i < 5; i++) {
+			
+			System.out.format("%-20s", myArr[0][i]);
+			System.out.format("%-20s", myArr[1][i]);
+			System.out.format("%-20s", myArr[2][i]);
+			System.out.println();
+			
+		}//end for loop
+		
+	}//end displayArray
+	
+	public static void printToFile(FileWriter fw, String[][] myArr) throws IOException{
+
+		//System.out.format("%-10s", "Name");
+		fw.write(String.format("%-20s", "Name"));
+
+		//System.out.format("%-10s", "Phone");
+		fw.write(String.format("%-20s", "Name"));
+		
+		//System.out.format("%-10s", "City");
+		fw.write(String.format("%-20s", "Name"));
+		
+		fw.write("\n");
+		//System.out.println();
+		
+		for(int i=0; i < 5; i++) {
+			
+			fw.write(String.format("%-20s", myArr[0][i]));
+			//System.out.format("%-10s", myArr[0][i]);
+			
+			fw.write(String.format("%-20s", myArr[1][i]));
+			//System.out.format("%-10s", myArr[1][i]);
+			
+			fw.write(String.format("%-20s", myArr[2][i]));
+			
+			fw.write("\n");
+			//System.out.format("%-10s", myArr[2][i]);
+			//System.out.println();
+			
+		}//end for loop
+		
+		fw.flush();
+		fw.close();
+		
+	}//end displayArray
+	
+	public static boolean isEmpty(String[][] myArr, int row, int col) {
+		
+		boolean flag = false;
+
+//		if(myArr[row][col] == "") {
+//			flag = true;
+//		}
+		
+		if(myArr[row][col] == "\\n")
+			flag = true;
+		
+		return flag;
+				
+	}//end isEmpty
+	
+	
+}//end class MyPhone

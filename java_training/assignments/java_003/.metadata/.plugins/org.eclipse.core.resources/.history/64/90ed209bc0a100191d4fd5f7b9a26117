@@ -1,0 +1,47 @@
+package compare;
+import java.io.*;
+
+
+public class CompareFile {
+
+	public static void main(String[] args) {
+	
+		String file1 = args[0];
+		String file2 = args[1];
+		int charCount1 = 0;
+		int charCount2 = 0;
+		int firstFileInput;
+		int secondFileInput;
+		
+		try {
+			
+			FileInputStream f1 = new FileInputStream(file1);
+			FileInputStream f2 = new FileInputStream(file2);
+			
+			do {
+				
+				firstFileInput = f1.read();
+				secondFileInput = f2.read();
+				if(firstFileInput != -1) {
+					charCount1++;
+				}
+				
+				if(secondFileInput != -1) {
+					charCount2++;
+				}
+				
+				
+				
+			} while(firstFileInput != 1 || secondFileInput != -1);
+					
+		} catch (IOException e) {
+			System.out.println("I/O Error: " + e);
+		} finally {
+			
+		}
+		
+		
+	}//end main
+	
+	
+}//end CompareFile

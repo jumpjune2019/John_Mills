@@ -1,0 +1,13 @@
+package matrixcustomhandlers;
+
+public class IncorrectKeyException extends Exception {
+
+	public IncorrectKeyException() {
+		System.out.println("THAT ISNT 1, 2, OR 3");
+	}
+		
+	public String message() {
+		System.out.println("THAT ISNT 1, 2, OR 3");
+	}
+	
+}

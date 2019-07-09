@@ -1,0 +1,133 @@
+package matrixcustomhandlers;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class MatrixHandler {
+
+	public static void main(String[] args){
+
+		
+		Scanner scan = new Scanner(System.in);
+		int input = 0;
+
+		String myArr[][] = {
+
+			{"Snake eyes", "Australian yo", "Little Joe From Kokomo", "No field five", "Easy six", "Six one you're done"},
+			{"Ace caught a deuce", "Ballerina", "The fever", "Jimmie Hicks", "Benny Blue", "Easy eight"},
+			{"Easy four", "OJ", "Brooklyn Forrest", "Big Red", "Eighter from Decatur", "Nina from Pasadena"},
+			{"Little Phoebe", "Easy Six", "Skinny McKinney", "Square pair", "Railroad nine", "Big one on the end"},
+			{"Sixie from Dixie", "Skinny Dugan", "Easy eight", "Jesse James", "Puppy paws", "Yo"},
+			{"The devil", "Easy eight", "Lou Brown", "Tennessee", "Six five no jive", "Midnight"}
+
+		};//end array instantiation
+
+
+		System.out.println("Would you like the matrix printed to \n1) screen\n2) file \n3) both");
+	
+		try {
+			if(!scan.hasNextInt() || !inRange(scan.nextInt())) {
+				throw new IncorrectKeyException();
+			}
+			input = scan.nextInt();
+	
+			
+			if(input == 1) {
+				printToScreen(myArr);
+			}else if(input == 2) {
+				printToFile(myArr);
+			}else {
+				printToScreen(myArr);
+				printToFile(myArr);
+			}
+		}catch(IncorrectKeyException e) {
+			System.out.print("Err: " + e.getMessage());
+		}
+		
+
+	}//end main
+	
+	public static boolean inRange(int input) {
+
+		boolean flag = true;
+		
+		if(input > 3 || input < 1) {
+			flag = false;
+		}
+		
+		return flag;
+		
+	}
+	
+	public static void printToScreen(String[][] myArr) {
+		
+		try {
+			System.out.print("      ");
+			for(int i=0; i < 6; i++){
+				System.out.format("%-24s", "Die " + (i+1));
+			}
+			System.out.println();
+	
+			for(int i=0; i < 6; i++){
+	
+				System.out.format("Die " + (i+1) + " ");
+	
+				for(int j=0; j < 6; j++){
+	
+					if(myArr[10][1233]) {
+						throw new IN
+					}
+					System.out.format("%-24s", myArr[i][j]);
+	
+				}
+				System.out.println();
+	
+			}
+		}catch(InvalidValueException e) {
+			System.out.println("Err: " + e.getMessage());
+		}
+		
+	}//end printToScreen
+	
+	
+	public static void printToFile(String[][] myArr){
+		
+		
+		try(FileWriter fw = new FileWriter("C:\\java_training\\assignments\\java_003\\matrixchoice\\src\\dice.txt")){
+			
+			//System.out.print("      ");
+			fw.write("      ");
+			for(int i=0; i < 6; i++){
+				//System.out.format("%-24s", "Die " + (i+1));
+				fw.write(String.format("%-24s", "Die " + (i+1)));
+			}
+			//System.out.println();
+			fw.write("\n");
+
+			for(int i=0; i < 6; i++){
+
+				//System.out.format("Die " + (i+1) + " ");
+				fw.write(String.format("Die " + (i+1) + " "));
+
+				for(int j=0; j < 6; j++){
+
+					//System.out.format("%-24s", myArr[i][j]);
+					fw.write(String.format("%-24s", myArr[i][j]));
+
+				}
+				//System.out.println();
+				fw.write("\n");
+
+			}//end for loop
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}//end printToFile
+	
+
+}//end class MatrixHandler
