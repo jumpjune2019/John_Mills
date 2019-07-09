@@ -1,12 +1,6 @@
 /*********************************
  * written by John Mills on July 8, 2019
  * for JUMP program
- * Program creates a *mini* database using a double array
- * prints to screen and writes to file the input of Name, Number and City
- * 
- * Exceptions are used to catch certain conditions such as empty input
- * , IOExceptions, fileNotFoundExceptions, ETC
- * 
  */
 
 package phone;
@@ -31,15 +25,8 @@ public class MyPhone{
 				
 				System.out.println("Enter a name and press enter:");
 				
-				
-				/*
-				 * keepGoing starts as true so this loop always enters at least once
-				 * keepGoing is set to false on input. If input is empty, Exception is thrown,
-				 * keepGoing is set to true, keep looping until input isnt empty
-				 */
 				while(keepGoing) {
 					
-					//throws MyException if empty input
 					try {
 						
 						phoneBook[0][i] = br.readLine();
@@ -56,12 +43,10 @@ public class MyPhone{
 							
 				}//end while
 				
-				//false until this statement, sets to true to get in next loop
 				keepGoing = true;
 				
 				System.out.println("Enter your phone number and press enter:");
 				
-				//same definition as above
 				while(keepGoing) {
 					
 					try {
@@ -101,12 +86,7 @@ public class MyPhone{
 					}
 							
 				}//end while
-			
 				
-				/*
-				 * Asks if input is correct and displays. Assumes correct if any key
-				 * other than R or r is pressed. Forces new input for all fields if R or r is pressed
-				 */
 				System.out.println("Data entered is:");
 				System.out.println("Name: " + phoneBook[0][i]);
 				System.out.println("Number: " + phoneBook[1][i]);
@@ -131,10 +111,6 @@ public class MyPhone{
 		
 	}//end main
 	
-	/*
-	 * simple print method to print to screen
-	 * uses format to display nicely
-	 */
 	public static void printToScreen(String[][] myArr) {
 
 		System.out.format("%-20s", "Name");
@@ -153,10 +129,6 @@ public class MyPhone{
 		
 	}//end displayArray
 	
-	/*
-	 * simple print method to print to file
-	 * uses format to display nicely
-	 */
 	public static void printToFile(FileWriter fw, String[][] myArr) throws IOException{
 
 		fw.write(String.format("%-20s", "Name"));
