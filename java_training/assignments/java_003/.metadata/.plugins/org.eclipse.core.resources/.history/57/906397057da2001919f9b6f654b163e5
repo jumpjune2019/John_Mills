@@ -1,8 +1,3 @@
-/*********************************
- * written by John Mills on July 8, 2019
- * for JUMP program
- */
-
 package phone;
 import java.io.*;
 
