@@ -1,0 +1,59 @@
+
+
+public class MyThread implements Runnable{
+	Thread thrd;
+	boolean suspended;
+	boolean stopped;
+	
+	MyThread(String name){
+		thrd = new Thread(this, name);
+		suspended = false;
+		stopped = false;
+		thrd.start();
+	}
+	
+	
+	public void run(){
+		
+		System.out.println(thrd.getName() + " starting execution.");
+		try {
+			
+			while(true) {
+				
+				Thread.sleep(400);
+				//System.out.println("Executing Thread " + thrd.getName());
+						
+			}//end while
+			
+			
+		} catch(InterruptedException exc) {
+			
+		}
+		
+	}
+
+	public boolean isMyThreadAlive() {
+		
+		return thrd.isAlive();
+		
+	}
+	
+	synchronized void myStop() {
+		stopped = true;
+		// The following ensures that a suspended thread can be stopped.
+		suspended = false;
+		notify();
+	}
+	// Suspend the thread.
+	synchronized void mySuspend() {
+		suspended = true;
+	}
+	// Resume the thread.
+	synchronized void myResume() {
+		suspended = false;
+		notify();
+	}
+	
+	
+	
+}

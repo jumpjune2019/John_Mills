@@ -1,0 +1,37 @@
+
+
+public class MyThread implements Runnable{
+	Thread thrd;
+	
+	MyThread(String name){
+		thrd = new Thread(this, name);
+		thrd.start();
+	}
+	
+	
+	public void run(){
+		
+		System.out.println(thrd.getName() + " starting execution.");
+		try {
+			
+			while(true) {
+				
+				Thread.sleep(400);
+				//System.out.println("Executing Thread " + thrd.getName());
+						
+			}//end while
+			
+			
+		} catch(InterruptedException exc) {
+			
+		}
+		
+	}
+
+	public boolean isMyThreadAlive() {
+		
+		return thrd.isAlive();
+		
+	}
+	
+}

@@ -1,0 +1,181 @@
+import java.util.*;
+import java.io.*;
+
+public class Assignment01_ThreadControl {
+
+	public static void main(String[] args) throws Exception{
+
+		System.out.println("Main thread is starting");
+		MyThread currentThread = null;
+		MyThread firstThread = new MyThread("1");
+		MyThread secondThread = new MyThread("2");
+		MyThread thirdThread = new MyThread("3");
+		MyThread fourthThread = new MyThread("4");
+		MyThread fifthThread = new MyThread("5");
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input;
+		String controller;
+		boolean flag = true;
+		boolean firstTimeThrough = true;
+		String holder;
+		
+		//input = br.readLine();
+		
+		do {
+			
+			try {
+			input = br.readLine().toUpperCase();
+
+			switch(input) {
+			
+			
+				case "1":{
+					
+					System.out.println("Controlling thread 1");
+					//currentThread = firstThread;
+					
+					if(firstTimeThrough == true) {
+						currentThread = firstThread;
+						firstTimeThrough = false;
+					}
+					
+//					System.out.println("Thread State: " + currentThread.getMyThreadState());
+					if(currentThread == firstThread) {
+						
+						if(currentThread.isSuspended()) {
+							currentThread.myResume();
+						}else {
+							currentThread.mySuspend();
+						}
+						
+					}
+					
+				
+					break;
+				}//end case 1
+				
+				case "2":{
+					System.out.println("Controlling thread 2");
+					
+					
+					if(firstTimeThrough == true) {
+						currentThread = secondThread;
+						firstTimeThrough = false;
+					}
+					
+					
+					break;
+				}
+				
+				case "3":{
+					
+					if(firstTimeThrough == true) {
+						currentThread = thirdThread;
+						firstTimeThrough = false;
+					}
+					
+					break;
+				}
+				case "4":{
+					
+					if(firstTimeThrough == true) {
+						currentThread = fourthThread;
+						firstTimeThrough = false;
+					}
+					
+					break;
+				}
+				case "5":{
+					
+					if(firstTimeThrough == true) {
+						currentThread = fifthThread;
+						firstTimeThrough = false;
+					}
+					
+					break;
+				}
+				
+				case "S":{
+					
+					if(currentThread != null) {
+						currentThread.myStop();
+					}
+					break;
+					
+				}//end case S
+				
+				case "T":{
+					
+					if(currentThread != null) {
+						currentThread.setMyThreadPriority("T");
+						//System.out.println("The current thread is:" + currentThread.getMyName());
+						//System.out.println("Priority is: " + currentThread.getMyThreadPriority());
+					}
+					break;
+					
+				}
+				
+				case "N":{
+					
+					if(currentThread != null) {
+						currentThread.setMyThreadPriority("N");
+						//System.out.println("The current thread is:" + currentThread.getMyName());
+						//System.out.println("Priority is: " + currentThread.getMyThreadPriority());
+					}
+					break;
+					
+				}
+				
+				case "L":{
+					
+					if(currentThread != null) {
+						currentThread.setMyThreadPriority("L");
+						//System.out.println("The current thread is:" + currentThread.getMyName());
+						//System.out.println("Priority is: " + currentThread.getMyThreadPriority());
+					}
+					break;
+					
+				}
+							
+				default:{
+					throw new WrongInputException();
+				}
+				
+			
+			
+			}//end switch statement
+			
+			}catch(WrongInputException e) {
+				System.out.println("Push the right button idiot!");
+				continue;
+			}
+			
+			//input = br.readLine();
+			System.out.println("firstThread alive?: " + firstThread.isMyThreadAlive());
+			
+		}while(firstThread.isMyThreadAlive());
+		
+		
+		System.out.println("Main thread terminating");
+		
+	}//end main
+
+	
+	
+	public static boolean allAlive(MyThread one, MyThread two, MyThread three, MyThread four, MyThread five) {
+		
+		boolean flag = false;
+		
+		if(one.isMyThreadAlive() || two.isMyThreadAlive() || three.isMyThreadAlive() || four.isMyThreadAlive() || five.isMyThreadAlive()) {
+			flag = true;
+		}
+		
+		return flag;
+		
+	}//end allAlive
+	
+		
+
+	
+}//end class

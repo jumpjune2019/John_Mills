@@ -1,0 +1,99 @@
+
+
+public class MyThread implements Runnable{
+	Thread thrd;
+	boolean suspended;
+	boolean stopped;
+	
+	MyThread(String name){
+		thrd = new Thread(this, name);
+		suspended = false;
+		stopped = false;
+		thrd.start();
+	}
+	
+	
+	public void run(){
+		
+		System.out.println(thrd.getName() + " starting execution.");
+		try {
+			
+			while(true) {
+				
+				Thread.sleep(5000);
+
+				
+				synchronized (this) {
+					
+					while(suspended) {
+						System.out.println("suspended from running");
+						wait();
+					}
+					System.out.println("not suspended from running");
+					
+					//terminates thread
+					if(stopped) {
+						break;
+					} 
+					
+					
+					
+				}//end synchronized
+				
+				
+			}//end while
+			
+			
+		} catch(InterruptedException exc) {
+			
+		}
+		
+	}
+
+	public boolean isMyThreadAlive() {
+		
+		return thrd.isAlive();
+		
+	}
+	
+	synchronized void myStop() {
+		stopped = true;
+		// The following ensures that a suspended thread can be stopped.
+		suspended = false;
+		notify();
+	}
+	// Suspend the thread.
+	synchronized void mySuspend() {
+		suspended = true;
+	}
+	// Resume the thread.
+	synchronized void myResume() {
+		suspended = false;
+		notify();
+	}
+	
+	
+	public void setMyThreadPriority(String input) {
+		
+		if(input.equals("T")) {
+			thrd.setPriority(10);
+		}else if(input.equals("N")) {
+			thrd.setPriority(5);
+		}else if(input.equals("L")){
+			thrd.setPriority(1);
+		}
+				
+	}
+	
+	public int getMyThreadPriority() {
+		
+		return thrd.getPriority();
+	}
+	
+	public String getMyName() {
+		return thrd.getName();
+	}
+	
+	
+	
+}//end class

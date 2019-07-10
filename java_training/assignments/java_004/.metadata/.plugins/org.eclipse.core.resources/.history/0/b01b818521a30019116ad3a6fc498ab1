@@ -1,0 +1,16 @@
+
+
+public class MyThread implements Runnable{
+	MyThread thrd;
+	
+	MyThread(String name){
+		thrd = new MyThread(this, name);
+		thrd.start();
+	}
+	
+	
+	public void run(){
+		
+	};
+
+}
