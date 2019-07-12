@@ -1,4 +1,6 @@
 import java.awt.event.KeyListener;
+import java.io.*;
+
 import javax.swing.JFrame;
 import javax.swing.JRootPane;
 
@@ -16,6 +18,8 @@ public class Assignment01_ThreadControl {
 			threadArr[i] = new MyThread(Integer.toString(i+1));
 		}
 
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		//String input = "";
 		int counter = 5;
 		int takeControl = 0;
 		char input = ' ';
@@ -29,27 +33,27 @@ public class Assignment01_ThreadControl {
 				if(counter != 0) {
 					//input = br.readLine().toUpperCase();
 					input = getCh();
-					input = Character.toUpperCase(input);
+					inout = Character.toUpperCase(input);
 				}else {
 					break;
 				}
 	
 				switch(input) {
 							
-					case '1':{
+					case "1":{
 						
 						if(firstTimeThrough == true) {
 							currentThread = threadArr[0];
 							firstTimeThrough = false;
 						}
 						
-						currentThread = threadControl(takeControl, currentThread, threadArr, Character.getNumericValue(input));
+						currentThread = threadControl(takeControl, currentThread, threadArr, Integer.parseInt(input));
 						takeControl = 1;
 						
 						break;
 					}//end case 1
 					
-					case '2':{
+					case "2":{
 						
 						
 						if(firstTimeThrough == true) {
@@ -57,12 +61,12 @@ public class Assignment01_ThreadControl {
 							firstTimeThrough = false;
 						}
 						
-						currentThread = threadControl(takeControl, currentThread, threadArr, Character.getNumericValue(input));
+						currentThread = threadControl(takeControl, currentThread, threadArr, Integer.parseInt(input));
 						takeControl = 2;	
 						break;
 					}
 					
-					case '3':{
+					case "3":{
 						
 						if(firstTimeThrough == true) {
 							currentThread = threadArr[2];
@@ -71,14 +75,14 @@ public class Assignment01_ThreadControl {
 						System.out.println("TakeControl in case 3 is " + takeControl);
 
 						
-						currentThread = threadControl(takeControl, currentThread, threadArr, Character.getNumericValue(input));
+						currentThread = threadControl(takeControl, currentThread, threadArr, Integer.parseInt(input));
 						System.out.println("Current thread after method call: " + currentThread.getMyName());
 						takeControl = 3;
 						
 						
 						break;
 					}
-					case '4':{
+					case "4":{
 						
 						if(firstTimeThrough == true) {
 							currentThread = threadArr[3];
@@ -86,25 +90,25 @@ public class Assignment01_ThreadControl {
 						}
 						
 						
-						currentThread = threadControl(takeControl, currentThread, threadArr, Character.getNumericValue(input));
+						currentThread = threadControl(takeControl, currentThread, threadArr, Integer.parseInt(input));
 						takeControl = 4;
 						
 						break;
 					}
-					case '5':{
+					case "5":{
 						
 						if(firstTimeThrough == true) {
 							currentThread = threadArr[4];
 							firstTimeThrough = false;
 						}
 						
-						currentThread = threadControl(takeControl, currentThread, threadArr, Character.getNumericValue(input));
+						currentThread = threadControl(takeControl, currentThread, threadArr, Integer.parseInt(input));
 						takeControl = 5;				
 							
 						break;
 					}
 					
-					case 'S':{
+					case "S":{
 						
 						if(currentThread != null) {
 							
@@ -120,7 +124,7 @@ public class Assignment01_ThreadControl {
 						
 					}//end case S
 					
-					case 'T':{
+					case "T":{
 						
 						if(currentThread != null) {
 							currentThread.setMyThreadPriority("T");
@@ -129,7 +133,7 @@ public class Assignment01_ThreadControl {
 						
 					}
 					
-					case 'N':{
+					case "N":{
 						
 						if(currentThread != null) {
 							currentThread.setMyThreadPriority("N");
@@ -138,7 +142,7 @@ public class Assignment01_ThreadControl {
 						
 					}
 					
-					case 'L':{
+					case "L":{
 						
 						if(currentThread != null) {
 							currentThread.setMyThreadPriority("L");
@@ -154,9 +158,7 @@ public class Assignment01_ThreadControl {
 				}//end switch statement
 			
 			}catch(WrongInputException e) {
-				System.out.println("Press 1-5 to access a thread. Press again to pause and resume the thread.");
-				System.out.println("Press T to set priority to high, L for low, and N for normal.");
-				System.out.println("Press S to terminate a thread.");
+				System.out.println("Push the right button idiot!");
 				continue;
 			}
 			
