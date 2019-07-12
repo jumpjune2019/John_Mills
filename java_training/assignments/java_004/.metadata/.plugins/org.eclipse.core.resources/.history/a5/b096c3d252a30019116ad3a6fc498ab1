@@ -1,0 +1,53 @@
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class MyKeyListener implements KeyListener{
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public String returnKeyPress(KeyEvent e) {
+		
+		String output = "";
+		
+		if(e.getKeyCode() == 49) {
+			output = "1";
+		}else if(e.getKeyCode() == 50) {
+			output = "2";
+		}else if(e.getKeyCode() == 51) {
+			output = "3";
+		}else if(e.getKeyCode() == 52) {
+			output = "4";
+		}else if(e.getKeyCode() == 53) {
+			output = "5";
+		}else if(e.getKeyCode() == 83) {
+			output = "S";
+		}else if(e.getKeyCode() == 84) {
+			output = "T";
+		}else if(e.getKeyCode() == 76) {
+			output = "L";
+		}else if(e.getKeyCode() == 78) {
+			output = "N";
+		}
+		
+		return output;
+		
+	}//end returnKeyPress
+
+}

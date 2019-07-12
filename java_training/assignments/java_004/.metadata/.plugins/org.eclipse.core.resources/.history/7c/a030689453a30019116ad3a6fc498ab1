@@ -1,0 +1,18 @@
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+
+public class MyKeyListener extends KeyAdapter{
+
+
+	@Override
+	public void keyPressed(KeyEvent event) {
+		
+		
+		
+	}//end keyPressed
+	
+	
+}//end MyKeyListener

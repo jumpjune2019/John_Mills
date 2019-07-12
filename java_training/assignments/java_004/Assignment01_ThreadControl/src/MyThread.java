@@ -2,15 +2,28 @@
 
 public class MyThread implements Runnable{
 	Thread thrd;
+//	Thread thrdArr[];
 	boolean suspended;
 	boolean stopped;
 	
+	//keeping this in here for testing
+	//purposes until thread array is finished
 	MyThread(String name){
 		thrd = new Thread(this, name);
 		suspended = false;
 		stopped = false;
 		thrd.start();
 	}
+	
+	//overloaded constructor to allow for
+	//for array construction
+//	MyThread(String name, int length){
+//		thrd = new Thread(this, name);
+//		suspended = false;
+//		stopped = false;
+//		thrdArr = new Thread[length];
+//		thrd.start();
+//	}
 	
 	
 	public void run(){
@@ -20,7 +33,7 @@ public class MyThread implements Runnable{
 			
 			while(true) {
 				
-				Thread.sleep(1000);
+				Thread.sleep(3000);
 
 				
 				synchronized (this) {

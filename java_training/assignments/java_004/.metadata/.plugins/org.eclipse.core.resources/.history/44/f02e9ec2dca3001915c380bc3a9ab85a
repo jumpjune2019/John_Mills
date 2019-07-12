@@ -1,0 +1,46 @@
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class Frame implements KeyListener {
+
+	char test = ' ';
+
+	JFrame frame = new JFrame("Key Listener");
+	char result = ' ';
+	Container contentPane = frame.getContentPane();
+	Frame(){
+		super();
+	}
+	
+	@Override
+	public void keyTyped(KeyEvent e) {
+		
+		test = e.getKeyChar();
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+
+	}
+	
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
+
+	public char getChar() {
+		// Execute();
+		return test;
+
+	}//end getChar
+
+}
