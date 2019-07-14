@@ -1,0 +1,22 @@
+package genarrayswap;
+
+public class GenericClass<T>{
+
+	private T myArr[];
+	
+	public GenericClass(T[] myArr){
+		
+		this.myArr = myArr;
+		
+	}
+	
+	
+	public T[] genSwap(T[] arrOne, T[] arrTwo) {
+		
+		
+		
+		
+	}//end genSwap
+	
+	
+}//end GenericClass

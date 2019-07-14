@@ -1,0 +1,107 @@
+package trafficlight;
+
+
+class MyThread implements Runnable {
+	Thread thrd;
+	boolean suspended;
+	boolean stopped;
+	Lights currentLight;
+	
+	
+	// Construct a new thread.
+	MyThread(Lights currentLight) {
+		thrd = new Thread(this);
+		
+		//starting all threads in a suspended state
+		suspended = false;
+		stopped = false;
+		this.currentLight = currentLight;
+		//thrd.start(); // start the thread
+	}
+	
+	
+	// Begin execution of new thread.
+	public void run() {
+		
+		try {
+			
+			while(true) {
+				
+				//synchronized (this){
+
+					//System.out.println("Light is " + currentLight.name() + " - Go!");
+					
+					System.out.println("Light is " + currentLight.getString());
+					Thread.sleep(currentLight.getSeconds());
+															
+					
+					stopped = true;
+					
+					if(stopped) {
+						break;
+					}
+					
+				//}//end synchronized
+			
+			}//end infinite while loop
+			
+			
+		}catch(InterruptedException exc) {
+			System.out.println(thrd.getName() + " interrupted.");
+		}
+
+	}//end run
+	
+	// Suspend the thread.
+	synchronized void mySuspend() {
+		//System.out.println("Pausing thread " + this.getMyName());
+		suspended = true;
+	}
+	
+	// Resume the thread.
+	synchronized void myResume() {
+		//System.out.println("Resuming thread " + this.getMyName());
+		suspended = false;
+		notify();
+	}
+	
+	synchronized void myStop() {
+		
+		stopped = true;
+		// The following ensures that a suspended thread can be stopped.
+		suspended = false;
+		
+		notify();
+	}//end myStop
+	
+	synchronized void mySleep() {
+		
+		try {
+			Thread.sleep(currentLight.getSeconds());
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error");
+		}
+		
+	}
+	
+	synchronized void setMyPriority(int x) {
+		thrd.setPriority(x);
+	}
+	
+	synchronized void myStart() {
+		thrd.start();
+	}
+	
+	synchronized void myJoin() {
+		
+		//System.out.println("here in join");
+		try {
+			thrd.join();
+		} catch (InterruptedException e) {
+			System.out.println("Interrupted exception");
+		}
+	}
+	
+	
+}//MyThread

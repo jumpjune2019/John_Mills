@@ -1,0 +1,25 @@
+package genarrayswap;
+
+public class GenericArraySwap {
+
+	
+	public static void main(String[] args) {
+		
+		Integer[] testArr = new Integer[10];
+		
+		for(int i=0; i < 10; i++) {	
+			testArr[i] = i;
+		}//end for loop
+		
+		
+		GenericClass<Integer> myVar = new GenericClass<>(testArr);
+		
+		for(int i=0; i < 10; i++) {
+			System.out.println("Num is: " + myVar.getIndex(i));
+		}
+		
+		
+	}//end main
+	
+	
+}

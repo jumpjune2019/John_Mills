@@ -1,0 +1,46 @@
+package trafficlight;
+
+public enum Lights {
+	Green(5000, "Green - Go!"), Yellow(10000, "Yellow - Beware!"), Red(1000, "Red - Stop!");
+	private long seconds;
+	private String myStr;
+	private int current;
+	String state;
+	
+	private Lights(long seconds, String myStr) {
+		this.seconds = seconds;
+		this.myStr = myStr;
+		current = 0;
+	}
+	
+	public long getSeconds() {
+		return seconds;
+	}
+	
+	public String getString() {
+		return myStr;
+	}
+	
+	synchronized Lights getNext() {
+		
+		current++;
+		if(current >= 3) {
+			current = 0; 
+		}
+		
+		return values()[current];
+		
+	}
+	
+	synchronized Lights getCurrent() {
+		
+		int temp = current;
+		current++;
+		if(current >= 3) {
+			current = 0; 
+		}
+		
+		return values()[temp];
+	}
+	
+}//end enum Lights

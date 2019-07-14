@@ -1,0 +1,22 @@
+package trafficlight;
+
+public enum Lights {
+	Green(5000, "Green - Go!"), Yellow(2000, "Yellow - Beware!"), Red(3000, "Red - Stop!");
+	private long seconds;
+	private String myStr;
+	
+	private Lights(long seconds, String myStr) {
+		this.seconds = seconds;
+		this.myStr = myStr;
+	}
+	
+	public long getSeconds() {
+		return seconds;
+	}
+	
+	public String getString() {
+		return myStr;
+	}
+	
+	
+}//end enum Lights

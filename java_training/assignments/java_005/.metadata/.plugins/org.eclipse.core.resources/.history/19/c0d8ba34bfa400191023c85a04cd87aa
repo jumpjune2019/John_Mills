@@ -1,0 +1,10 @@
+package genarrayswap;
+
+public class GenericClass<T>{
+
+	private T myArr[];
+	
+	
+	
+	
+}

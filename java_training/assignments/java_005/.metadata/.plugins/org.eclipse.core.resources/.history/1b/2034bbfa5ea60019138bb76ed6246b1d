@@ -1,0 +1,76 @@
+package trafficlight;
+import java.io.*;
+
+public class TrafficLight {
+
+	public static void main(String[] args) throws IOException{
+
+		boolean flag = false;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Lights myLight = Lights.Green;
+		MyThread firstThread = null; //new MyThread(myLight);
+		MyThread secondThread = null; //new MyThread(myLight);
+		MyThread thirdThread = null; //new MyThread(myLight);
+		
+		System.out.println("Traffic Light Simulator is a Go!");
+
+		
+		while(true) {
+			
+
+			firstThread = new MyThread(myLight.getNext());
+			try {
+				firstThread.thrd.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			if(br.ready()){
+				break;
+			}
+			
+			secondThread = new MyThread(myLight.getNext());
+			try {
+				secondThread.thrd.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			if(br.ready()){
+				break;
+			}
+			
+			thirdThread = new MyThread(myLight.getNext());
+			try {
+				thirdThread.thrd.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			if(br.ready()){
+				break;
+			}
+					
+								
+		}//end while loop
+		
+		System.out.println("here");
+		
+		
+		if(firstThread.isMyAlive()) {
+			firstThread.myStop();
+		}
+		if(secondThread.isMyAlive()) {
+			secondThread.myStop();
+		}
+		if(thirdThread.isMyAlive()) {
+			thirdThread.myStop();
+		}
+		
+	}//end main
+
+		
+}//end class TrafficLights

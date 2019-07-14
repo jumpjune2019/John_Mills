@@ -1,0 +1,39 @@
+package trafficlight;
+import java.io.*;
+
+public class TrafficLight {
+
+	public static void main(String[] args) throws IOException{
+
+		boolean flag = false;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Lights myLight = Lights.Green;
+		MyThread greenLight = new MyThread(Lights.Green);
+		MyThread yellowLight = new MyThread(Lights.Yellow);
+		MyThread redLight = new MyThread(Lights.Red);
+				
+		while(flag == false) {
+			
+			if(br.ready()){
+				flag = true;
+			}
+			
+//			greenLight.myResume();
+//			greenLight.mySleep();
+//			greenLight.mySuspend();
+//			yellowLight.myResume();
+//			yellowLight.mySleep();
+//			greenLight.mySuspend();
+//			yellowLight.myResume();
+//			redLight.mySleep();
+//			redLight.mySuspend();			
+						
+		}//end while loop
+		
+		greenLight.myStop();
+		yellowLight.myStop();
+		redLight.myStop();
+		
+	}//end main
+
+}//end class TrafficLights

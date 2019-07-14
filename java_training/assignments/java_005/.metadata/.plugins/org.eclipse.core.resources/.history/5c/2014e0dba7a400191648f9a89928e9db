@@ -1,0 +1,9 @@
+package trafficlight;
+
+public enum Lights {
+
+	
+	
+	
+	
+}

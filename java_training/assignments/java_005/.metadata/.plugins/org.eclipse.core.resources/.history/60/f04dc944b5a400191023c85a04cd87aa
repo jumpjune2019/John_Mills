@@ -1,0 +1,16 @@
+package trafficlight;
+
+public enum Lights {
+	GREEN(5000), YELLOW(2000), RED(3000);
+	private long seconds;
+	
+	private Lights(long seconds) {
+		this.seconds = seconds;
+	}
+	
+	public long getSeconds() {
+		return seconds;
+	}
+
+	
+}//end enum Lights  

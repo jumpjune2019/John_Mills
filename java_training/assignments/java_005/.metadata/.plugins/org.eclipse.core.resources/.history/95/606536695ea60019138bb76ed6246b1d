@@ -1,0 +1,60 @@
+package trafficlight;
+import java.io.*;
+import java.util.*;
+
+public class TrafficLight {
+
+	public static void main(String[] args) throws IOException{
+
+		boolean flag = false;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		//Scanner scan = new Scanner(System.in);
+		Lights myLight = Lights.Green;
+		MyThread firstThread = null; //new MyThread(myLight);
+		MyThread secondThread = null; //new MyThread(myLight);
+		MyThread thirdThread = null; //new MyThread(myLight);
+		
+
+		
+		while(flag == false) {
+			
+			if(br.ready()){
+				flag = true;
+				System.out.println("HEREHRHEHRE");
+			}
+
+			firstThread = new MyThread(myLight.getNext());
+			try {
+				firstThread.thrd.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			secondThread = new MyThread(myLight.getNext());
+			try {
+				secondThread.thrd.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			thirdThread = new MyThread(myLight.getNext());
+			try {
+				thirdThread.thrd.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+					
+			
+						
+		}//end while loop
+		
+		System.out.println("here");
+		
+		firstThread.myStop();
+		secondThread.myStop();
+		thirdThread.myStop();
+//		
+	}//end main
+
+}//end class TrafficLights

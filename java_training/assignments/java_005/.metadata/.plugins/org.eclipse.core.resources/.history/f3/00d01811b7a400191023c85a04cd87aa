@@ -1,0 +1,28 @@
+package trafficlight;
+import java.io.*;
+
+public class TrafficLight {
+
+	public static void main(String[] args) throws IOException{
+
+		boolean flag = false;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Lights myLight = Lights.Green;
+		MyThread cycleLights = new MyThread(myLight);
+
+				
+		while(flag == false) {
+			
+			if(br.ready()){
+				flag = true;
+			}
+
+			System.out.println("Asd");
+						
+		}//end while loop
+		
+		//cycleLights.myStop();
+		
+	}//end main
+
+}//end class TrafficLights

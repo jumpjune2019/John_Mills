@@ -1,0 +1,33 @@
+package genarrayswap;
+
+public class GenericArraySwap {
+
+	
+	public static void main(String[] args) {
+		
+		Integer[] intArr = new Integer[10];
+		String[] stringArr = new String[10];
+		
+		for(int i=0; i < 10; i++) {	
+			intArr[i] = i;
+			stringArr[i] = Integer.toString(i);
+		}//end for loop
+		
+		
+		GenericClass<Integer> myVar = new GenericClass<>(testArr);
+		
+		System.out.println("Integer elements before swapping");
+		System.out.println("arr[3]: " + myVar.getIndex(3));
+		System.out.println("arr[6]: " + myVar.getIndex(6));
+		System.out.println("Swapping");
+		
+		myVar.genSwap(3, 6);
+		
+		System.out.println("arr[3]: " + myVar.getIndex(3));
+		System.out.println("arr[6]: " + myVar.getIndex(6));
+		
+		
+	}//end main
+	
+	
+}

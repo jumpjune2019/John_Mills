@@ -1,0 +1,10 @@
+package trafficlight;
+
+public enum Lights {
+	GREEN(5000), YELLOW(2000), RED(3000);
+	private int seconds;
+	
+	private Lights(int seconds) {
+		this.seconds = seconds;
+	}
+}  
