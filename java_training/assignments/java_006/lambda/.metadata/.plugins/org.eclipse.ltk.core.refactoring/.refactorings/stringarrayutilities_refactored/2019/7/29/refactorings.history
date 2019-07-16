@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;stringarrayutilities_refactored.Assignment08.java&apos; to &apos;OriginalGame.java&apos;&#x0D;&#x0A;- Original project: &apos;stringarrayutilities_refactored&apos;&#x0D;&#x0A;- Original element: &apos;stringarrayutilities_refactored.Assignment08.java&apos;&#x0D;&#x0A;- Renamed element: &apos;stringarrayutilities_refactored.OriginalGame.java&apos;" description="Rename compilation unit &apos;Assignment08.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;stringarrayutilities_refactored{Assignment08.java" name="OriginalGame.java" references="false" stamp="1563308999776" version="1.0"/>
+</session>

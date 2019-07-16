@@ -1,0 +1,29 @@
+package basicsorting;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Driver {
+
+	public static void main(String[] args) {
+
+		
+		Sort<Integer> sortInt;
+		Sort<String> sortString;
+		Integer intArr[] = new Integer[10];
+		
+		
+		sortInt = (arr, ascorDesc, caseSens) -> {
+			
+			Collections.sort(Arrays.asList(arr));
+			return arr;
+			
+		};
+		
+		
+	}//end main
+
+	
+	
+	
+}//end Driver class

@@ -1,0 +1,49 @@
+package basicsorting;
+
+import java.util.*;
+
+public class Driver{
+
+	public static void main(String[] args) {
+
+		
+		Sort<Integer> sortInt;
+		Sort<String> sortString;
+		Integer intArr[] = {10, 3, 4, 15, 7, 1, 21};
+		String stringArr[] = { "claude", "Phil", "lois", "clark", "Arthur", "Mera", "bruce" };
+		boolean up = true;
+		boolean down = false;
+		boolean caseSensitive = true;
+		boolean caseNotSens = false;
+
+		sortInt = (arr, ascorDesc, caseSens) -> {
+			
+			Collections.sort(Arrays.asList(arr));
+			return arr;
+			
+		};
+		
+		intArr = sortInt.sort(intArr, up, caseSensitive);
+		
+		
+	}//end main
+
+	
+	public static void displayIntArr(Integer[] arr) {
+		
+		for(int i=0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}//end displayArr
+	
+	public static void displayStringArr(String[] arr) {
+		
+		for(int i=0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}//end displayArr
+	
+	
+}//end Driver class

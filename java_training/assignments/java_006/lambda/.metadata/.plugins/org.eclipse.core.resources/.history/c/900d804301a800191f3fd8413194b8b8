@@ -1,0 +1,27 @@
+package headortail;
+
+import java.util.*;
+
+public class Driver {
+
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		String input;
+		Random rand = new Random();
+		
+		RandomNum myRand = () -> rand.nextInt(2) + 1;
+		
+		
+		
+		
+		while(!scan.next().equalsIgnoreCase("q")){
+		
+		
+		}//end while
+			
+	}//end main
+	
+
+}//end Driver class

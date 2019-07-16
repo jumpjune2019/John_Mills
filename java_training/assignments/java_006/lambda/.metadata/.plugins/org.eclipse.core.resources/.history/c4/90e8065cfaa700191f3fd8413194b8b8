@@ -1,0 +1,32 @@
+package basicsorting;
+
+import java.util.*;
+
+public class Driver {
+
+	public static void main(String[] args) {
+
+		
+		Sort<Integer> sortInt;
+		Sort<String> sortString;
+		Integer intArr[] = new Integer[10];
+		Random rand = new Random();
+		for(int i=0; i < 10; i++){
+			
+		}//end for
+		
+		
+		sortInt = (arr, ascorDesc, caseSens) -> {
+			
+			Collections.sort(Arrays.asList(arr));
+			return arr;
+			
+		};
+		
+		
+	}//end main
+
+	
+	
+	
+}//end Driver class

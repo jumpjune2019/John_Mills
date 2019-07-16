@@ -1,0 +1,6 @@
+package basicsorting;
+
+interface Sort<T> {
+	abstract T[] sort(T[] arr, boolean upOrDown);
+	abstract T[] sort(T[] arr, boolean upOrDown, boolean caseSensitive);
+}

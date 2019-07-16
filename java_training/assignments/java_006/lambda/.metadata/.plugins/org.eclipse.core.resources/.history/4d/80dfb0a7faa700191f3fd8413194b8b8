@@ -1,0 +1,41 @@
+package basicsorting;
+
+import java.util.*;
+
+public class Driver{
+
+	public static void main(String[] args) {
+
+		
+		Sort<Integer> sortInt;
+		Sort<String> sortString;
+		Integer intArr[] = new Integer[10];
+		Random rand = new Random();
+		for(int i=0; i < 10; i++){
+			intArr[i] = rand.nextInt(10) + 1;
+		}//end for
+		
+		displayArr(intArr);
+		
+		sortInt = (arr, ascorDesc, caseSens) -> {
+			
+			Collections.sort(Arrays.asList(arr));
+			return arr;
+			
+		};
+		
+		
+	}//end main
+
+	
+	public static void displayArr(int[] arr) {
+		
+		for(int i=0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		
+		
+	}//end displayArr
+	
+	
+}//end Driver class

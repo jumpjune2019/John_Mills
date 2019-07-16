@@ -1,0 +1,82 @@
+package basicsorting;
+
+import java.util.*;
+
+public class Driver{
+
+	public static void main(String[] args) {
+
+		
+		Sort<Integer> sortInt;
+		Sort<String> sortString;
+		Integer intArr[] = {10, 3, 4, 15, 7, 1, 21};
+		String stringArr[] = { "claude", "Phil", "lois", "clark", "Arthur", "Mera", "bruce" };
+		boolean up = true;
+		boolean down = false;
+		boolean caseSensitive = true;
+		boolean caseNotSens = false;
+
+		
+		System.out.println("Arrays before sort");
+		displayIntArr(intArr);
+		displayStringArr(stringArr);
+		
+		sortInt = (arr, ascOrDesc, caseSens) -> {
+			
+			Collections.sort(Arrays.asList(arr));
+			if(ascOrDesc == true) {
+				return arr;
+			}else {
+				Collections.reverse(Arrays.asList(arr));
+				return arr;
+			}
+			
+		};
+		
+		sortString = (arr, ascOrDesc, caseSens) -> {
+			
+			if(caseSens == true) {
+				Collections.sort(Arrays.asList(arr));
+			}else {
+				Collections.sort(Arrays.asList(arr), String.CASE_INSENSITIVE_ORDER);
+			}
+			
+			if(ascOrDesc == true) {
+				return arr;
+			}else {
+				Collections.reverse(Arrays.asList(arr));
+				return arr;
+			}
+			
+		};
+		
+		intArr = sortInt.sort(intArr, up, caseNotSens);
+		stringArr = sortString.sort(stringArr, up, caseNotSens);
+
+
+		
+		
+	}//end main
+
+	
+	
+	public static void displayIntArr(Integer[] arr) {
+		
+		for(int i=0; i < arr.length - 1; i++) {
+			System.out.print(arr[i] + ", ");
+		}
+		System.out.println(arr[arr.length-1]);
+		
+	}//end displayArr
+	
+	public static void displayStringArr(String[] arr) {
+		
+		for(int i=0; i < arr.length - 1; i++) {
+			System.out.print(arr[i] + ", ");
+		}
+		System.out.println(arr[arr.length-1]);
+		
+	}//end displayArr
+	
+	
+}//end Driver class

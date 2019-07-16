@@ -1,0 +1,5 @@
+package basicsorting;
+
+public interface Sort {
+
+}

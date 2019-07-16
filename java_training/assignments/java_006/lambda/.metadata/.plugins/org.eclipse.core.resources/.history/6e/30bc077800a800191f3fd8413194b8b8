@@ -1,0 +1,26 @@
+package headortail;
+
+import java.util.*;
+
+public class Driver {
+
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		
+		System.out.println("Press any key to play and continue playing.");
+		System.out.println("Press Q or q to quit.");
+		
+		
+		while(!scan.next().equalsIgnoreCase("q")){
+		
+			System.out.println("here");
+		
+		}//end while
+			
+	}//end main
+	
+
+}//end Driver class

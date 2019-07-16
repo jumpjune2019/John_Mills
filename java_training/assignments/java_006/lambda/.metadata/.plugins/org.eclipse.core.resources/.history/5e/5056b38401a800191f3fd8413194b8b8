@@ -1,0 +1,30 @@
+package headortail;
+
+import java.util.*;
+
+public class Driver {
+
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		String input;
+		Random rand = new Random();
+		RandomNum myRand;
+		HeadOrTail headOrTail;
+		
+		myRand = () -> rand.nextInt(2) + 1;
+		
+		headOrTail = (x) -> (x == 1) ? "Head" : "Tail";
+		
+		System.out.println("Welcome to the game of Head or Tail where you will flip your life away!");
+		
+		while(!scan.next().equalsIgnoreCase("q")){
+		
+		
+		}//end while
+			
+	}//end main
+	
+
+}//end Driver class
