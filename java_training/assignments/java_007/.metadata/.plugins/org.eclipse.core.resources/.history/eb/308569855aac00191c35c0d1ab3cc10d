@@ -1,0 +1,41 @@
+package gridlayoutchallenge;
+
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+
+public class MyGrid {
+
+	private JFrame mainFrame;
+	private JPanel controlPanel;
+	private JLabel topLabel;
+	
+	
+	public MyGrid() {
+		prepareGui();
+	}
+	
+
+	private void prepareGui() {
+		
+		mainFrame = new JFrame("Column and Rows Example");
+		//mainFrame.setSize(d);
+		
+		topLabel = new JLabel("Basic Matrix Demo", JLabel.CENTER);
+		
+		
+		
+	}
+	
+	
+	public static int getRandomNum() {
+		
+		Random rand = new Random();
+		int myRandom = rand.nextInt(4) + 2;
+		
+		return myRandom;
+		
+	}//end getRandomNum
+	
+	
+}//end MyGrid class

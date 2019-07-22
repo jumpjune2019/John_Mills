@@ -1,0 +1,123 @@
+package gridlayoutchallenge;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.*;
+import javax.swing.*;
+
+public class MyGrid{
+
+	private JFrame mainFrame;
+	private JPanel controlPanel;
+	private JLabel topLabel;
+	private JLabel bottomLabel;
+	
+	
+	public MyGrid() {
+		prepareGui();
+	}
+	
+
+	private void prepareGui() {
+		
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		int height = screenSize.height;
+		int width = screenSize.width;
+		
+		mainFrame = new JFrame("Column and Rows Example");
+		
+		//set size of Frame. have to cast to int for it to work
+		mainFrame.setSize(width/2, height/2);
+		mainFrame.setLocationRelativeTo(null);
+		mainFrame.setLayout(new BorderLayout());
+		
+		topLabel = new JLabel("", JLabel.CENTER);
+		bottomLabel = new JLabel("", JLabel.CENTER);
+		
+		controlPanel = new JPanel();
+		controlPanel.setLayout(new FlowLayout());
+		
+		
+		// old school way to close a window
+		mainFrame.addWindowListener(new WindowAdapter() {
+	         public void windowClosing(WindowEvent windowEvent){
+	             // this is the way to force a java application to gracefully exit
+	        	 // when not going to end via the main method entry point
+	        	 System.exit(0);
+	         }        
+	    }); 
+		
+		
+		mainFrame.add(topLabel, BorderLayout.NORTH);
+		mainFrame.add(controlPanel, BorderLayout.CENTER);
+		mainFrame.add(bottomLabel, BorderLayout.SOUTH);
+		mainFrame.setVisible(true);
+		
+	}//end prepareGui
+	
+	
+	
+	public void showGui(){
+		
+		int rows = getRandomNum();
+		int columns = getRandomNum();
+		
+		
+		topLabel.setText("Basic Matrix Demo");
+		bottomLabel.setText("No seat selected");
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.PINK);
+		panel.setSize(300, 300);
+		GridLayout layout = new GridLayout(rows, columns);
+		panel.setLayout(layout);
+		//panel.setLayout(new BoxLayout());
+		
+		System.out.println("Rows: " + rows);
+		System.out.println("Cols: " + columns);
+
+		
+		for(int i=0; i < rows; i++) {
+
+			for(int j=0; j < columns; j++) {
+
+				panel.add(new Cell(panel, bottomLabel, i+1, j+1));
+				
+			}//end inner
+			
+		}//end outer
+		
+				
+//		int length = rows * columns;
+//		JButton[] buttons = new JButton[length];
+//		int x;
+//		String prefixLabel = "Button ";
+//		for (x = 0; x < length; x++) {
+//			buttons[x] = new JButton(prefixLabel.concat(Integer.toString(x + 1)));
+//			buttons[x].addActionListener((ae) ->{
+//				bottomLabel.setText(ae.getActionCommand());
+//
+//			});
+//			panel.add(buttons[x]);
+//		}
+		
+		controlPanel.add(panel);
+		mainFrame.setVisible(true);
+		
+	}//end showGui
+	
+
+	public static int getRandomNum() {
+		
+		Random rand = new Random();
+		int myRandom = rand.nextInt(4) + 2;
+		
+		return myRandom;
+		
+	}//end getRandomNum
+	
+	
+}//end MyGrid class

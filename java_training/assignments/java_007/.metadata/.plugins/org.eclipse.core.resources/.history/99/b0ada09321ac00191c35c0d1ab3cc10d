@@ -1,0 +1,5 @@
+package BasicSwingDemo;
+
+public interface SetFrame {
+
+}

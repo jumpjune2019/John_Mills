@@ -1,0 +1,17 @@
+package gridlayoutchallenge;
+
+import javax.swing.*;
+
+public class Cell {
+
+	JPanel panel;
+	JButton button;
+	
+	
+	public Cell() {
+		
+	}
+	
+	
+	
+}

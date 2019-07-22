@@ -1,0 +1,150 @@
+package gameofdice;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.util.*;
+
+
+import java.awt.event.*;
+
+public class Button  implements ActionListener {
+	JLabel jlab;
+	String first;
+	String second;
+	String firstMsg;
+	String secondMsg;
+	
+	public void setButtons(JPanel frm, String f, String s, String sMsg) {
+		first = f;
+		second = s;
+		secondMsg = sMsg;
+		
+		//second = myFlip.g
+		
+		JButton jbtnUp = new JButton(first);
+		JButton jbtnDown = new JButton(second);
+		// Add action listeners.
+		jbtnUp.addActionListener(this);
+		jbtnDown.addActionListener(this);
+		// Add the buttons to the content pane.
+		frm.add(jbtnUp);
+		frm.add(jbtnDown);
+		// Create a label.
+		jlab = new JLabel("Welcome to the dice throw challenge!");
+		// Add the label to the frame.
+		frm.add(jlab);
+	}
+	
+	// Handle button events.
+
+	public void actionPerformed(ActionEvent ae) {
+		
+		String input = playGame();
+		
+		if(ae.getActionCommand().equals(first)) {
+			jlab.setText(input);
+		} else if(ae.getActionCommand().equals(second)){
+			//just closes pane if clicks quit
+			System.exit(0);
+		}
+	}//end actionPerformed
+	
+	
+	public static String[] playGame() {
+		
+		String output[] = new String[2];
+		
+		String myArr[][] = {
+
+				{"Snake eyes", "Australian yo", "Little Joe From Kokomo", "No field five", "Easy six", "Six one you're done"},
+				{"Ace caught a deuce", "Ballerina", "The fever", "Jimmie Hicks", "Benny Blue", "Easy eight"},
+				{"Easy four", "OJ", "Brooklyn Forrest", "Big Red", "Eighter from Decatur", "Nina from Pasadena"},
+				{"Little Phoebe", "Easy Six", "Skinny McKinney", "Square pair", "Railroad nine", "Big one on the end"},
+				{"Sixie from Dixie", "Skinny Dugan", "Easy eight", "Jesse James", "Puppy paws", "Yo"},
+				{"The devil", "Easy eight", "Lou Brown", "Tennessee", "Six five no jive", "Midnight"}
+
+			};//end array instantiation
+		
+		Random rand = new Random();
+		
+		int myFirstRoll, mySecondRoll;
+		int computerFirstRoll, computerSecondRoll;
+		Roll myRoll;
+		Tie myTie;
+		
+		myRoll = () -> rand.nextInt(6) + 1;
+		
+		myTie = (myFirst, mySecond, comFirst, comSecond) -> {
+			
+			boolean myFlag = false;
+
+			if((myFirst == mySecond) && (comFirst == comSecond)){
+				myFlag = true;
+			}else if((myFirst != mySecond) && (comFirst != comSecond)){
+				myFlag = true;
+			}
+
+			return myFlag;
+			
+		};
+		
+//		System.out.println("Welcome to the dice throw challenge!");
+//		System.out.println("Do you feel lucky? \"Punk\"... Do ya?");
+//		System.out.println("Press any key and ENTER to throw your dice or press (Q or q) to chicken your butt off...");
+
+		myFirstRoll = myRoll.getInt();
+		mySecondRoll = myRoll.getInt();
+		computerFirstRoll = myRoll.getInt();
+		computerSecondRoll = myRoll.getInt();
+				
+//			System.out.println("Rolling the dice!!");
+//
+//			System.out.println("You have rolled a " + myFirstRoll + " and " + mySecondRoll + " > the \"" + myArr[myFirstRoll-1][mySecondRoll-1] + "\"");
+//			System.out.println("I have rolled a " + computerFirstRoll + " and " + computerSecondRoll + " > the \"" + myArr[computerFirstRoll-1][computerSecondRoll-1] + "\"");
+	
+		output[0] = "You have rolled a " + myFirstRoll + " and " + mySecondRoll + " > the \"" + myArr[myFirstRoll-1][mySecondRoll-1] + "\"";
+		output[0] = output[0] + "I have rolled a " + computerFirstRoll + " and " + computerSecondRoll + " > the \"" + myArr[computerFirstRoll-1][computerSecondRoll-1] + "\"";
+		
+		if((myFirstRoll + mySecondRoll) > (computerFirstRoll + computerSecondRoll)){
+
+//			System.out.println("You win!!");
+//			System.out.println("Did you cheat?? Gimme another try, c'mon Press any key and ENTER to throw your dice or press (Q or q) to quit");
+			output[1] = "You win!! Did you cheat?? Gimme another try, c'mon press play again to throw dice or quit to exit.";
+
+		}else if((myFirstRoll + mySecondRoll) < (computerFirstRoll + computerSecondRoll)){
+
+//			System.out.println("I win!!");
+//			System.out.println("Wanna try again? Press any key and ENTER to throw your dice or press (Q or q) to quit");
+			output[1]= "I win!! Wanna try again? Press play again to throw your dice or quit to exit.";
+
+		}else{
+
+
+			if(myTie.isTie(myFirstRoll, mySecondRoll, computerFirstRoll, computerSecondRoll)){
+				//same numbers no matter what
+//				System.out.println("Stalemate! You're tough, let's try for a tie-breaker. Press any key and ENTER to throw your dice or press (Q or q) to quit.");
+				output[1]= "Stalemate! You're tough, let's try for a tie-breaker. Press play again to throw your dice or quit to exit";
+			}else if(myFirstRoll == mySecondRoll){
+				//I win on a double
+//				System.out.println("Damn! You win on a Double! What Luck!");
+//				System.out.println("Did you cheat?? Gimme another try, c'mon Press any key and ENTER to throw your dice or press (Q or q) to quit");
+				output[1]= "Damn! You win on a Double! What Luck! Did you cheat?? Gimme another try. Press play again to throw your dice or quit to exit.";
+			}else{
+//				System.out.println("Damn! I win on a Double! Ah! I pity you fool");
+//				System.out.println("Wanna try again? Press any key and ENTER to throw your dice or press (Q or q) to quit");
+				output[1]= "Damn! I win on a Double! Ah! I pity you fool. Wanna try again? Press play again to throw your dice or quit to exit.";
+			}
+
+		}//end if/else chain
+
+		
+		
+		//TODO
+		//return actual string that is needed
+		return output;
+		
+	}//end playGame
+	
+
+}//end Button class

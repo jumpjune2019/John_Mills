@@ -1,0 +1,53 @@
+package gridlayoutchallenge;
+
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+
+public class MyGrid {
+
+	private JFrame mainFrame;
+	private JPanel controlPanel;
+	private JLabel topLabel;
+	
+	
+	public MyGrid() {
+		prepareGui();
+	}
+	
+
+	private void prepareGui() {
+		
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		int height = screenSize.height;
+		int width = screenSize.width;
+		
+		mainFrame = new JFrame("Column and Rows Example");
+		
+		//set size of Frame. have to cast to int for it to work
+		mainFrame.setSize(width/2, height/2);
+		mainFrame.setLocationRelativeTo(null);
+		
+		topLabel = new JLabel("Basic Matrix Demo", JLabel.NORTH);
+		
+		
+		
+		mainFrame.add(topLabel);
+		mainFrame.setVisible(true);
+		
+	}//end prepareGui
+	
+	
+	//private void set
+	
+	public static int getRandomNum() {
+		
+		Random rand = new Random();
+		int myRandom = rand.nextInt(4) + 2;
+		
+		return myRandom;
+		
+	}//end getRandomNum
+	
+	
+}//end MyGrid class

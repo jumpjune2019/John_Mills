@@ -1,0 +1,63 @@
+package headortail;
+import java.awt.*;
+import javax.swing.*;
+import java.util.*;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			Swing demo;
+			JFrame frm;
+			
+			public void run() {
+				demo = new Swing("Head or Tail!");
+				frm = demo.getFrame();
+				frm = setFrameStuff(frm, JFrame.EXIT_ON_CLOSE, 400, 380);
+				frm.setVisible(true);
+			}
+		});
+		
+		
+	}//end main
+	
+	public static int flip() {
+		Random rand = new Random();
+		return rand.nextInt(2) + 1;
+	}
+	
+	
+	public static JFrame setFrameStuff(JFrame frm, int onExit, int width, int height) {
+		
+		int roll = flip()
+		// this will center and size the JFrame on screen
+		// it will have a height and width of half the screen
+		centerAndSizeJFrameOnScreen(frm, width, height);
+		frm.setDefaultCloseOperation(onExit);
+		
+		JPanel panel1 = new JPanel();
+		JPanel panel2 = new JPanel();
+		
+		panel1.setLayout(new FlowLayout());
+		panel2.setLayout(new FlowLayout());
+		
+		Button bd1 = new Button();
+		Button bd2 = new Button();
+		//bd.setButtons(panel1, "First", "Second", "You Pressed First", "You Pressed Second");
+		bd1.setButtons(panel1, "Click to Flip!", "Waiting...");
+		
+		frm.add(panel1);
+		return frm;
+	}
+	
+	
+	public static void centerAndSizeJFrameOnScreen(JFrame frm, int width, int height) {
+		// set the size of the frame to half in width and height
+		frm.setSize(width/2, height/2);
+		// here's the part where the JFrame gets actually centered
+		frm.setLocationRelativeTo(null);
+	}
+	
+	
+}//end Driver

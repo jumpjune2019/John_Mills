@@ -1,0 +1,20 @@
+package gridlayoutchallenge;
+
+import java.util.*;
+
+public class MyGrid {
+
+	
+	
+	
+	private static int getRandomNum() {
+		
+		Random rand = new Random();
+		int myRandom = rand.nextInt(3) + 2;
+		
+		return myRandom;
+		
+	}
+	
+	
+}//end MyGrid class

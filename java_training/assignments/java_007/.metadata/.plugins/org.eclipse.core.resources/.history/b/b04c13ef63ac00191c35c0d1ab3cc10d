@@ -1,0 +1,15 @@
+package gridlayoutchallenge;
+
+public class Cell {
+
+	JPanel panel;
+	JButton button;
+	
+	
+	public Cell() {
+		
+	}
+	
+	
+	
+}

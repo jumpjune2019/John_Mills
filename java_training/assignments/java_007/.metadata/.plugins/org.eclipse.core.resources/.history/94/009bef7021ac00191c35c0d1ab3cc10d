@@ -1,0 +1,5 @@
+package BasicSwingCaseStudy;
+
+public interface ActionPerformed {
+
+}

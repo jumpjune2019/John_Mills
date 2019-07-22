@@ -1,0 +1,28 @@
+package gridlayoutchallenge;
+
+import java.awt.Container;
+
+import javax.swing.*;
+
+public class Cell {
+
+	JFrame frm;
+	JPanel panel;
+	JButton button;
+	
+	
+	public Cell(JFrame frm) {
+		
+		this.frm = frame;
+		
+	}
+	
+	
+	public static void addComponentsToPane(Container pane) {
+		
+        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
+        
+
+    }
+	
+}//end Cell class

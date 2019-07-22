@@ -1,0 +1,5 @@
+package BasicSwingDemo2;
+
+public interface SwingInterface {
+
+}

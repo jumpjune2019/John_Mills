@@ -1,0 +1,71 @@
+package gridlayoutchallenge;
+
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+
+public class MyGrid {
+
+	private JFrame mainFrame;
+	private JPanel controlPanel;
+	private JLabel topLabel;
+	private Panel middleRegion;
+	private JLabel bottomLabel;
+	
+	
+	public MyGrid() {
+		prepareGui();
+	}
+	
+
+	private void prepareGui() {
+		
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		int height = screenSize.height;
+		int width = screenSize.width;
+		
+		mainFrame = new JFrame("Column and Rows Example");
+		
+		//set size of Frame. have to cast to int for it to work
+		mainFrame.setSize(width/2, height/2);
+		mainFrame.setLocationRelativeTo(null);
+		mainFrame.setLayout(new BorderLayout());
+		
+		topLabel = new JLabel("", JLabel.CENTER);
+		bottomLabel = new JLabel("", JLabel.CENTER);
+		
+		
+		mainFrame.add(topLabel);
+		mainFrame.add(bottomLabel);
+		mainFrame.setVisible(true);
+		
+	}//end prepareGui
+	
+	
+	
+	public void showGui() {
+		
+		topLabel.setText("Basic Matrix Demo");
+		bottomLabel.setText("No seat selected");
+		
+		
+	}//end showGui
+	
+	
+	void setLabelInLayout(JFrame jF, JLabel jl) {
+		jl.setHorizontalAlignment(JLabel.CENTER);
+		jl.setVerticalAlignment(JLabel.CENTER);
+		jF.add(jl, position);
+	}
+	
+	public static int getRandomNum() {
+		
+		Random rand = new Random();
+		int myRandom = rand.nextInt(4) + 2;
+		
+		return myRandom;
+		
+	}//end getRandomNum
+	
+	
+}//end MyGrid class

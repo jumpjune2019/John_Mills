@@ -1,0 +1,29 @@
+package gridlayoutchallenge;
+
+import javax.swing.*;
+
+public class Cell {
+
+	JFrame frm;
+	JPanel panel;
+	JLabel label;
+	JButton button;
+	int rows, columns;
+	
+	
+	public Cell(int rows, int columns) {
+		this.rows = rows;
+		this.columns = columns;
+	}
+	
+	
+	
+	private void showCell() {
+		
+		label = 
+		
+		
+	}//end showCell
+	
+	
+}//end Cell class

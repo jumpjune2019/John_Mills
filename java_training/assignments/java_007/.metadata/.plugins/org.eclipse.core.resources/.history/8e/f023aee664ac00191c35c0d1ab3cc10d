@@ -1,0 +1,33 @@
+package gridlayoutchallenge;
+
+import javax.swing.*;
+
+public class Cell {
+
+	JFrame frm;
+	JPanel panel;
+	JLabel label;
+	JButton button;
+	int rows, columns;
+	
+	
+	public Cell(int rows, int columns) {
+		this.rows = rows;
+		this.columns = columns;
+	}
+	
+	
+	
+	private void prepareCell() {
+		
+		label = new JLabel("", JLabel.CENTER); 
+		
+	}//end showCell
+	
+	
+	public static String getCharForNumber(int i) {
+	    return i > 0 && i < 27 ? String.valueOf((char)(i + 64)) : null;
+	}
+	
+	
+}//end Cell class

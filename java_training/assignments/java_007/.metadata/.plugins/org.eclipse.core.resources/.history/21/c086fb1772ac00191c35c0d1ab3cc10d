@@ -1,0 +1,48 @@
+package gridlayoutchallenge;
+
+import javax.swing.*;
+
+public class Cell extends JPanel{
+
+	JPanel panel;
+	JLabel bottomLabel;
+	String input;
+	String message;
+	JButton button;
+	int rows, columns;
+	
+
+	//this looks like absolute garbage, but it works
+	//I will refactor code later when I can
+	//It is too late to do this now and I need sleep
+	public Cell(JPanel panel, JLabel bottomLabel, int rows, int columns) {
+		
+		this.bottomLabel = bottomLabel;
+		//message = input;
+		String input = getCharForNumber(rows) + "-" + Integer.toString(columns);
+		JButton button = new JButton(input);
+		JLabel label = new JLabel(input);
+
+		JPanel myPanel = new JPanel();
+		
+		button.addActionListener((ae) ->{
+			bottomLabel.setText(label.getText());
+		});
+
+		myPanel.add(label);
+		myPanel.add(button);
+		myPanel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		panel.add(label);
+		panel.add(button);
+		
+	}
+	
+	
+	public static String getCharForNumber(int i) {
+	    return i > 0 && i < 27 ? String.valueOf((char)(i + 64)) : null;
+	}
+	
+	
+}//end Cell class

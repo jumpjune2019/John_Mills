@@ -1,0 +1,32 @@
+package gridlayoutchallenge;
+
+import java.awt.*;
+import java.util.*;
+
+import javax.swing.JPanel;
+
+public class MyGrid {
+
+	private JPanel controlPanel;
+	
+	
+	public MyGrid() {
+		test();
+	}
+	
+	private void test() {
+		controlPanel = new JPanel();
+		controlPanel.setLayout(new FlowLayout());
+	}
+	
+	public static int getRandomNum() {
+		
+		Random rand = new Random();
+		int myRandom = rand.nextInt(4) + 2;
+		
+		return myRandom;
+		
+	}//end getRandomNum
+	
+	
+}//end MyGrid class

@@ -1,0 +1,74 @@
+package gridlayoutchallenge;
+
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.*;
+import javax.swing.*;
+
+public class MyGrid {
+
+	private JFrame mainFrame;
+	private JPanel controlPanel;
+	private JLabel topLabel;
+	private JPanel middleRegion;
+	private JLabel bottomLabel;
+	
+	
+	public MyGrid() {
+		prepareGui();
+	}
+	
+
+	private void prepareGui() {
+		
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		int height = screenSize.height;
+		int width = screenSize.width;
+		
+		mainFrame = new JFrame("Column and Rows Example");
+		
+		//set size of Frame. have to cast to int for it to work
+		mainFrame.setSize(width/2, height/2);
+		mainFrame.setLocationRelativeTo(null);
+		mainFrame.setLayout(new BorderLayout());
+		
+		topLabel = new JLabel("", JLabel.CENTER);
+		bottomLabel = new JLabel("", JLabel.CENTER);
+		// old school way to close a window
+		mainFrame.addWindowListener(new WindowAdapter() {
+	         public void windowClosing(WindowEvent windowEvent){
+	             // this is the way to force a java application to gracefully exit
+	        	 // when not going to end via the main method entry point
+	        	 System.exit(0);
+	         }        
+	    }); 
+		
+		mainFrame.add(topLabel, BorderLayout.NORTH);
+		mainFrame.add(bottomLabel, BorderLayout.SOUTH);
+		mainFrame.setVisible(true);
+		
+	}//end prepareGui
+	
+	
+	
+	public void showGui() {
+		
+		topLabel.setText("Basic Matrix Demo");
+		bottomLabel.setText("No seat selected");
+		
+		
+	}//end showGui
+	
+	
+	public static int getRandomNum() {
+		
+		Random rand = new Random();
+		int myRandom = rand.nextInt(4) + 2;
+		
+		return myRandom;
+		
+	}//end getRandomNum
+	
+	
+}//end MyGrid class

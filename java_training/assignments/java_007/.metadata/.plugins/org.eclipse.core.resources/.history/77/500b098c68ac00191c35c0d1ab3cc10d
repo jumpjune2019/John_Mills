@@ -1,0 +1,40 @@
+package gridlayoutchallenge;
+
+import javax.swing.*;
+
+public class Cell extends JPanel{
+
+	JFrame frm;
+	JPanel panel;
+	JLabel label;
+	JButton button;
+	int rows, columns;
+	
+	
+	public Cell(JFrame frm, int rows, int columns) {
+		this.rows = rows;
+		this.columns = columns;
+		this.frm = frm;
+		prepareCell(rows, columns);
+	}
+	
+	
+	private void prepareCell(int rowNum, int columnNum) {
+		
+		String name;
+		name = getCharForNumber(rowNum) + "-" + Integer.toString(columnNum);
+		
+		label = new JLabel(name, JLabel.CENTER);
+		JButton button = new JButton(name);
+
+		frm.add(this);
+		
+	}//end showCell
+	
+	
+	public static String getCharForNumber(int i) {
+	    return i > 0 && i < 27 ? String.valueOf((char)(i + 64)) : null;
+	}
+	
+	
+}//end Cell class
