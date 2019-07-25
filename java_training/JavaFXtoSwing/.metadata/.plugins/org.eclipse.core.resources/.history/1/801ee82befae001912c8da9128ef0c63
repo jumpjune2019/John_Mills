@@ -1,0 +1,20 @@
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JLabel pushButton;
+	JLabel showLabel;
+	
+	
+	public DriverGui() {
+	
+		frm = new JFrame("Using Images with buttons");
+		frm.setSize(250, 350);
+		
+		
+		
+		
+	}
+	
+}//end DriverGui class

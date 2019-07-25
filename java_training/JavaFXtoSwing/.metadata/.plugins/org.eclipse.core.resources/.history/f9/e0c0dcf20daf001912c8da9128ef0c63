@@ -1,0 +1,17 @@
+import javax.swing.JFrame;
+
+public class DriverGui {
+
+	JFrame frm;
+	
+	
+	public DriverGui() {
+		
+		frm = new JFrame("ScrollPane Demo");
+		frm.setSize(350, 350);
+		
+	}
+	
+	
+	
+}

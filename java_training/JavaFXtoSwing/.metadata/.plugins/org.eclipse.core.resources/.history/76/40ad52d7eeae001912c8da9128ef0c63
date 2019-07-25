@@ -1,0 +1,18 @@
+import javax.swing.*;
+
+public class ButtonImage {
+
+	JButton button;
+	JButton image;
+	ImageIcon image;
+	
+	
+	public ButtonImage(String imageFile, String input) {
+		
+		
+		
+		
+	}
+	
+	
+}//end ButtonImage class

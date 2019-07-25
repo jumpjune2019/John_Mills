@@ -1,0 +1,43 @@
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JLabel label;
+	JScrollPane scrollPane;
+	JTextArea text;
+	JButton button;
+	
+	public DriverGui() {
+		
+		String msg = "A ScrollPane streamlines the process \n" + 
+				" of adding darn scroll bars to a window whose contents \n" + 
+				" exceed the viewing area dimension of the window \n " + 
+				" It also enables a control to fit in \n " + 
+				" Such as this label control in JavaFX \n " + 
+				" Without it, we could not really view well the content \n " + 
+				" of a control if it overflowed, so using scrollbars helps lots! \n";
+		
+		frm = new JFrame("ScrollPane Demo");
+		frm.setSize(350, 350);
+		
+		label = new JLabel("ScrollPane Demo");
+		
+		text = new JTextArea(5, 30);
+		scrollPane = new JScrollPane(text);
+		
+		
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+	}//end driverGui constructor
+	
+	
+}//end Drivergui class

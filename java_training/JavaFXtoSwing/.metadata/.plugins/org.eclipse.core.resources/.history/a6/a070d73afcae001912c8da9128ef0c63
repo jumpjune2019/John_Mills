@@ -1,0 +1,15 @@
+
+public class DriverGui {
+
+	JFrame frm;
+	
+	
+	public DriverGui() {
+		
+		frm = new JFrame(300, 220);
+		
+	}
+	
+	
+	
+}

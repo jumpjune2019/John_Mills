@@ -1,0 +1,48 @@
+import java.awt.Dimension;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JPanel panel;
+	JLabel topLabel;
+	JTextField textField;
+	JButton button;
+	JLabel bottomLabe;
+	
+	public DriverGui() {
+		
+		frm = new JFrame("TextField Demo");
+		frm.setSize(250, 180);
+		
+		panel = new JPanel();
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		
+		topLabel = new JLabel("TextField Demo");
+		
+		textField = new JTextField();
+		textField.setSize(new Dimension(10));
+		
+		button = new JButton("Get Search String");
+		
+		
+		panel.add(topLabel);
+		panel.add(textField);
+		panel.add(button);
+		
+		frm.add(panel);
+		frm.setVisible(true);
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+	}//end DriverGui
+	
+	
+}//end DriverGui class

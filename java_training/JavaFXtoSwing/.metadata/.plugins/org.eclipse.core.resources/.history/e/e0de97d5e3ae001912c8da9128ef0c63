@@ -1,0 +1,21 @@
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}//end main
+	
+	
+	public static void prepareGui() {
+		
+		JFrame frm = new JFrame(new BorderLayout());
+		
+		
+		
+	}
+	
+}

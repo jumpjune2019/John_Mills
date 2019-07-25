@@ -1,0 +1,19 @@
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Grid Demo 2");
+		frm.setSize(400, 250);
+		frm.setLayout(new GridBagLayout());
+		
+		
+		
+	}//end DriverGui constructor
+	
+	
+}//end DriverGui class

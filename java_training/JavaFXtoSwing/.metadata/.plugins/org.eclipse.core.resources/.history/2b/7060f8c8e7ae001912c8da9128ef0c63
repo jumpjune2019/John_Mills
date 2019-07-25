@@ -1,0 +1,22 @@
+import javax.swing.*;
+
+public class DriverGui {
+
+	JButton alpha;
+	JButton beta;
+	
+	
+	public DriverGui(){
+		
+		
+		
+	}
+	
+	private void prepareGui() {
+		
+		alpha = new Button("Aplha")
+		
+		
+	}//end prepareGui
+	
+}//end DriverGui class

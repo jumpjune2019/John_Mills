@@ -1,0 +1,29 @@
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JLabel label;
+	ImageIcon image;
+	
+	public DriverGui() {
+		
+		prepareGui();
+		
+	}
+	
+	
+	private void prepareGui() {
+		
+		frm = new JFrame("Fungi is Hilarious");
+		frm.setSize(540, 540);
+		
+		image = new ImageIcon("")
+		
+		
+		
+	}//end prepareGui
+	
+	
+}//end DriverGui

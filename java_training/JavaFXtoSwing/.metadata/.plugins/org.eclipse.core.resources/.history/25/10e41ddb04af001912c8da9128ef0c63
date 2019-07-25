@@ -1,0 +1,138 @@
+import java.awt.BorderLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.tree.TreePath;
+
+import javax.swing.*;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+
+public class DriverGui {
+
+	JFrame frm;
+	JTree tree;
+	JButton button;
+	JPanel panel;
+	JLabel top;
+	JPanel temp;
+	JLabel selection;
+	JLabel path;
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Tree View Demo");
+		frm.setSize(850, 600);
+		frm.setLayout(new BorderLayout());
+		
+		panel = new JPanel(new BorderLayout());
+		temp = new JPanel();
+		temp.setLayout(new BoxLayout(temp, BoxLayout.Y_AXIS));
+		
+		top = new JLabel("TreeViewDemo");
+		
+		DefaultMutableTreeNode food = new DefaultMutableTreeNode("Food");
+		DefaultMutableTreeNode fruits = new DefaultMutableTreeNode("Fruits");
+		DefaultMutableTreeNode apples = new DefaultMutableTreeNode("Apples");
+		
+		DefaultMutableTreeNode fuji = new DefaultMutableTreeNode("Fuji");
+		DefaultMutableTreeNode winesap = new DefaultMutableTreeNode("Winesap");
+		DefaultMutableTreeNode clark = new DefaultMutableTreeNode("Clark");
+		
+		DefaultMutableTreeNode nuts = new DefaultMutableTreeNode("Nuts");
+		DefaultMutableTreeNode vegetables = new DefaultMutableTreeNode("Vegetables");
+		DefaultMutableTreeNode pears = new DefaultMutableTreeNode("Pears");
+		DefaultMutableTreeNode oranges = new DefaultMutableTreeNode("Oranges");
+		DefaultMutableTreeNode corn = new DefaultMutableTreeNode("Corn");
+		DefaultMutableTreeNode peas = new DefaultMutableTreeNode("Peas");
+		DefaultMutableTreeNode broccoli = new DefaultMutableTreeNode("Broccoli");
+		DefaultMutableTreeNode beans = new DefaultMutableTreeNode("Beans");
+		
+		DefaultMutableTreeNode walnuts = new DefaultMutableTreeNode("Walnuts");
+		DefaultMutableTreeNode almonds = new DefaultMutableTreeNode("Almonds");
+		DefaultMutableTreeNode pistachios = new DefaultMutableTreeNode("Pistachios");
+		DefaultMutableTreeNode cashews = new DefaultMutableTreeNode("Cashews");
+		
+		food.add(fruits);
+		food.add(vegetables);
+		food.add(nuts);
+		
+		fruits.add(apples);
+		apples.add(fuji);
+		apples.add(winesap);
+		apples.add(clark);
+		
+		fruits.add(pears);
+		fruits.add(oranges);
+		
+		vegetables.add(corn);
+		vegetables.add(peas);
+		vegetables.add(broccoli);
+		vegetables.add(beans);
+		
+		nuts.add(walnuts);
+		nuts.add(almonds);
+		nuts.add(pistachios);
+		nuts.add(cashews);
+		
+		tree = new JTree(food);
+		
+		button = new JButton("Collapse");
+		selection = new JLabel("No Selection");
+		path = new JLabel("");
+		
+		tree.getSelectionModel().addTreeSelectionListener((TreeSelectionListener) new TreeSelectionListener() {
+
+			@Override
+			public void valueChanged(TreeSelectionEvent e) {
+				// TODO Auto-generated method stub
+				
+				String pathToNode = "";
+				
+				DefaultMutableTreeNode selected = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
+				selection.setText("Selection is: " + selected.getUserObject().toString());
+				
+				Object[] myPath = getPath;
+				TreePath tp = e.getNewLeadSelectionPath(); 
+				
+			       if (tp != null) {
+			          pathToNode = tp.getLastPathComponent().toString();  
+			       }
+				path.setText(pathToNode);
+				
+			}//end valuechanged
+			
+			
+		});
+		
+		//panel.add(comp)
+		panel.add(button, BorderLayout.SOUTH);
+		
+		frm.add(top, BorderLayout.NORTH);
+		frm.add(tree, BorderLayout.CENTER);
+		frm.add(path, BorderLayout.EAST);
+		frm.add(panel, BorderLayout.SOUTH);
+		
+		frm.setVisible(true);
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+	}//end DriverGui constructor
+	
+	
+//	private String getPath() {
+//		
+//		
+//		Object[] paths = 
+//		
+//		
+//		return "";
+//		
+//	}//end getPath
+	
+	
+}//end DriverGui

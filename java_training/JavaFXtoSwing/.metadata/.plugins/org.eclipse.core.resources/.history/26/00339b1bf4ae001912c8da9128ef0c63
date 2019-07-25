@@ -1,0 +1,31 @@
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JLabel topLabel;
+	JButton button;
+	JLabel bottomLabe;
+	
+	public DriverGui() {
+		
+		frm = new JFrame("TextField Demo");
+
+		
+		
+		
+		
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+	}//end DriverGui
+	
+	
+}//end DriverGui class

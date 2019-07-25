@@ -1,0 +1,35 @@
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JPanel panel;
+	
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Grid Demo 2");
+		frm.setSize(400, 250);
+		frm.setLayout(new GridBagLayout());
+		
+		
+		
+		
+		
+		frm.addWindowListener(new WindowAdapter() {
+	         public void windowClosing(WindowEvent windowEvent){
+	             // this is the way to force a java application to gracefully exit
+	             // when not going to end via the main method entry point
+	             System.exit(0);
+	         }        
+	      });
+		
+		
+	}//end DriverGui constructor
+	
+	
+}//end DriverGui class

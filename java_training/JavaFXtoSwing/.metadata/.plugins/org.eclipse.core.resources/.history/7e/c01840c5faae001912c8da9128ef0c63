@@ -1,0 +1,56 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class DriverGui implements ActionListener{
+
+	JFrame frm;
+	JPanel panel;
+	JLabel top;
+	JRadioButton b1;
+	JRadioButton b2;
+	JRadioButton b3;
+	JRadioButton b4;
+	JLabel showButton;
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Radio Buttons Demo");
+		frm.setSize(300, 200);
+		
+		panel = new JPanel();
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		
+		b1 = new JRadioButton("Train");
+		b2 = new JRadioButton("Car");
+		b3 = new JRadioButton("Plane");
+		b4 = new JRadioButton("Boat");
+		
+		showButton = new JLabel("");
+		panel.add(top);
+		panel.add(b1);
+		panel.add(b2);
+		panel.add(b3);
+		panel.add(b4);
+		
+		frm.add(panel);
+		frm.setVisible(true);
+		
+	}//end DriverGui constructor
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		String input = e.getSource().toString();
+		switch(input) {
+		
+			case "Train":
+				showButton.setText("Train");
+		
+		}
+		
+	}
+	
+	
+}//end DriverGui class

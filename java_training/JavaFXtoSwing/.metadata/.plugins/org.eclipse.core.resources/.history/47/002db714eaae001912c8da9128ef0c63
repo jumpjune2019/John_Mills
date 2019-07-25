@@ -1,0 +1,24 @@
+import javax.swing.JFrame;
+
+public class DriverGui {
+
+	JFrame frm;
+	BufferedImage image;
+	
+	public DriverGui() {
+		
+		prepareGui();
+		
+	}
+	
+	
+	private void prepareGui() {
+		
+		frm
+		
+		
+		
+	}//end prepareGui
+	
+	
+}//end DriverGui

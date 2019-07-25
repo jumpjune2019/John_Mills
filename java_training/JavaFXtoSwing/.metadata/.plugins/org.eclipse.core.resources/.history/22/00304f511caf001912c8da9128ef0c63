@@ -1,0 +1,39 @@
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+/*
+ * this class creates the cells with the persons name
+ * and the button to book/unbook
+ */
+@SuppressWarnings("serial")
+//public class MyCell extends JPanel implements ActionListener{
+public class Cell extends JPanel{
+
+	
+	JLabel label;
+	JButton button;
+	
+	public Cell() {
+
+		prepareGui();
+	}
+	
+	
+	private void prepareGui() {
+				
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		this.add(label);
+		this.add(button);
+		
+	}//end prepareGui
+	
+
+	
+	private static String getCharForNumber(int i) {
+	    return i > 0 && i < 27 ? String.valueOf((char)(i + 64)) : null;
+	}
+	
+}//end MyGrid class

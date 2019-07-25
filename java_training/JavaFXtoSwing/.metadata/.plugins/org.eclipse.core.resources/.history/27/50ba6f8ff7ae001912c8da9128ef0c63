@@ -1,0 +1,64 @@
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JPanel panel;
+	JLabel topLabel;
+	JTextField textField;
+	JButton button;
+	JPanel bottomPanel;
+	JLabel search;
+	JLabel output;
+	
+	public DriverGui() {
+		
+		frm = new JFrame("TextField Demo");
+		frm.setSize(250, 180);
+		
+		panel = new JPanel();
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		panel.setSize(new Dimension(1000, 1000));
+		
+		topLabel = new JLabel("TextField Demo");
+		
+		textField = new JTextField();
+		//textField.setMaximumSize(new Dimension(textField.getPreferredSize()));
+		textField.setMaximumSize(new Dimension(500, 25));
+		
+		button = new JButton("Get Search String");
+		
+		bottomPanel = new JPanel(new FlowLayout());
+		search = new JLabel("Search String: ");
+		//output = new JLabel("");
+		
+		button.addActionListener((ae) -> {
+			search.setText("Search String: " + textField.getText());
+		});
+		
+		bottomPanel.add(search);
+		//bottomPanel.add(output);
+		
+		panel.add(topLabel);
+		panel.add(textField);
+		panel.add(button);
+		panel.add(bottomPanel);
+		
+		frm.add(panel);
+		frm.setVisible(true);
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+	}//end DriverGui
+	
+	
+}//end DriverGui class

@@ -1,0 +1,23 @@
+
+public class DriverGui {
+
+	JFrame frm;
+	
+	
+	public DriverGui() {
+		
+		prepareGui();
+		
+	}
+	
+	
+	private void prepareGui() {
+		
+		
+		
+		
+		
+	}//end prepareGui
+	
+	
+}//end DriverGui

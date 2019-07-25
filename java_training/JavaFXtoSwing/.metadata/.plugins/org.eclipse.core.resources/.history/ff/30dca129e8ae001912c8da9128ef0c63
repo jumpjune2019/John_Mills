@@ -1,0 +1,32 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+public class DriverGui{
+
+	JFrame frm;
+	JButton alpha;
+	JButton beta;
+	JLabel label;
+	
+	
+	public DriverGui(){
+		
+		
+		
+	}
+	
+	private void prepareGui() {
+		
+		frm = new JFrame("Demo 3");
+		frm.setSize(300, 100);
+		frm.setLayout(new BorderLayout());
+		
+		
+		alpha = new JButton("Alpha");
+		beta = new JButton("Beta");
+		
+		
+	}//end prepareGui
+	
+}//end DriverGui class

@@ -1,0 +1,33 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+		
+		prepareGui();
+		
+		
+	}//end main
+	
+	
+	public static void prepareGui() {
+		
+		JFrame frm = new JFrame("Hello World!");
+		JPanel panel = new JPanel(new BorderLayout());
+		JButton button = new JButton("Say 'Hello World!'");
+		
+		button.addActionListener((ae) -> {
+			
+			System.out.println("Hello World!");
+			
+		});
+		
+		frm.add(button);
+		frm.setVisible(true);
+		
+	}//end prepareGui
+	
+}

@@ -1,0 +1,33 @@
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+
+public class DriverGui {
+
+	JFrame frm;
+	JTree tree;
+	JButton button;
+	
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Tree View Demo");
+		frm.setSize(850, 600);
+		
+		DefaultMutableTreeNode top = new DefaultMutableTreeNode("Food");
+		
+		DefaultMutableTreeNode
+		
+		
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+	}//end DriverGui constructor
+	
+}//end DriverGui

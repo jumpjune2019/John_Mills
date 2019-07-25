@@ -1,0 +1,13 @@
+import javax.swing.*;
+
+public class ButtonImage {
+
+	
+	JButton fungi;
+	JButton diary;
+	JButton reset;
+	
+	
+	
+	
+}

@@ -1,0 +1,31 @@
+import javax.swing.*;
+
+public class DriverGui implements ActionListener{
+
+	JFrame frm;
+	JPanel panel;
+	JLabel top;
+	JRadioButton b1;
+	JRadioButton b2;
+	JRadioButton b3;
+	JRadioButton b4;
+	JLabel showButton;
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Radio Buttons Demo");
+		frm.setSize(300, 200);
+		
+		panel = new JPanel();
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		
+		b1 = new JRadioButton("Train");
+		b2 = new JRadioButton("Car");
+		b3 = new JRadioButton("Plane");
+		b4 = new JRadioButton("Boat");
+		
+		
+	}//end DriverGui constructor
+	
+	
+}//end DriverGui class

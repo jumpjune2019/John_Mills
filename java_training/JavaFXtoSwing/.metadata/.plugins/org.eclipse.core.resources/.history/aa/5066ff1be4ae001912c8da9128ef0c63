@@ -1,0 +1,31 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}//end main
+	
+	
+	public static void prepareGui() {
+		
+		JFrame frm = new JFrame("Hello World!");
+		JButton button = new JButton("Say 'Hello World!'");
+		
+		button.addActionListener((ae) -> {
+			
+			
+			
+			
+		});
+		
+		
+	}
+	
+}

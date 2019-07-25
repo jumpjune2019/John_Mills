@@ -1,0 +1,48 @@
+
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JLabel label;
+	ImageIcon image;
+	BufferedImage resizedImage;
+	
+	public DriverGui() {
+		
+		prepareGui();
+		
+	}
+	
+	
+	private void prepareGui() {
+		
+		frm = new JFrame("Fungi is Hilarious!");
+		frm.setSize(320, 80);
+		
+		
+		image = new ImageIcon("C:/java_training/JavaFXtoSwing/BasicJavaFxImageLabelToSwing/src/fungi.png");
+		
+		resizedImage = new BufferedImage(28, 28, BufferedImage.TYPE_INT_ARGB);
+		
+		
+		label = new JLabel(image);
+		
+		
+		frm.add(label);
+		frm.setVisible(true);
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+	}//end prepareGui
+	
+	
+}//end DriverGui

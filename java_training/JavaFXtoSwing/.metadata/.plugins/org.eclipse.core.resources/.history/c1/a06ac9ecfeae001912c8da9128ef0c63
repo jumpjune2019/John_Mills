@@ -1,0 +1,24 @@
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+public class DriverGui {
+
+	
+	
+	public DriverGui() {
+		
+		
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+		
+	}
+	
+	
+	
+	
+}//end DriverGui

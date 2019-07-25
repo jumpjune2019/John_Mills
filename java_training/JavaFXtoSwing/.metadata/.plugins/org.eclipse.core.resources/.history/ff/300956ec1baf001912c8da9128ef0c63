@@ -1,0 +1,18 @@
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Grid Demo 2");
+		frm.setSize(400, 250);
+		
+		
+		
+	}//end DriverGui constructor
+	
+	
+}//end DriverGui class

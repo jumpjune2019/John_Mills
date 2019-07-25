@@ -1,0 +1,25 @@
+public class Cell {
+	
+	Button btn;
+	Label lab;
+	
+	Cell(String b, String l) {
+        btn = new Button(b);
+        lab = new Label(l);
+        btn.setFont(fb);
+        lab.setFont(fl);
+		btn.setMaxWidth(Double.MAX_VALUE);
+		lab.setMaxWidth(Double.MAX_VALUE);
+		btn.setAlignment(Pos.CENTER);
+		lab.setAlignment(Pos.CENTER);
+        
+	}
+	
+	VBox getCell() {
+		VBox v = new VBox(btn, lab);
+		v.setAlignment(Pos.CENTER);
+		v.setSpacing(4);
+		return v;
+	}
+	
+}

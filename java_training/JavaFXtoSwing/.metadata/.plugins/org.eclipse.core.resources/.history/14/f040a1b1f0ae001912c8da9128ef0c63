@@ -1,0 +1,20 @@
+import javax.swing.*;
+
+@SuppressWarnings("serial")
+public class ButtonImage extends JPanel{
+
+	JButton button;
+	ImageIcon image;
+	JLabel label;
+	
+	
+	public ButtonImage(String imageFile, String input) {
+		
+		image = new ImageIcon(imageFile);
+		labe = new JLabel(image);
+		this.add(image);
+		
+	}
+	
+	
+}//end ButtonImage class

@@ -1,0 +1,32 @@
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JScrollPane pane;
+	JTextArea text;
+	JButton button;
+	
+	public DriverGui() {
+		
+		frm = new JFrame("ScrollPane Demo");
+		frm.setSize(350, 350);
+		
+		
+		
+		
+		
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+	}//end driverGui constructor
+	
+	
+}//end Drivergui class

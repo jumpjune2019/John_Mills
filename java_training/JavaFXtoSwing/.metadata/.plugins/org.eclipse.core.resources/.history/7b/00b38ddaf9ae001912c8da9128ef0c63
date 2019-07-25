@@ -1,0 +1,21 @@
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JLabel top;
+	JRadioButton b1;
+	JRadioButton b2;
+	JRadioButton b3;
+	JRadioButton b4;
+	JLabel showButton;
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Radio Buttons Demo");
+		frm.setSize(300, 200);
+		
+	}
+	
+	
+}//end DriverGui

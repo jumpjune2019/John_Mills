@@ -1,0 +1,40 @@
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+public class DriverGui {
+
+	JFrame frm;
+	JPanel panel;
+	JLabel top;
+	JButton button;
+	JLabel bottom;
+	
+	
+	public DriverGui() {
+		
+		frm = new JFrame("Toggle Button Demo");
+		frm.setSize(300, 220);
+	
+		
+		panel = new JPanel();
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		
+		
+		top = new JLabel("Push a Button");
+		
+		
+		
+		frm.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent) {
+				System.exit(0);
+			}
+		});
+		
+		
+	}
+	
+	
+	
+}
