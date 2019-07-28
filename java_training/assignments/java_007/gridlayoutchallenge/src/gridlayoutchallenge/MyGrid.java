@@ -10,8 +10,8 @@ import javax.swing.*;
 
 public class MyGrid{
 
-	private JFrame mainFrame;
-	private JPanel controlPanel;
+	private JFrame frm;
+	private JPanel panel;
 	private JLabel topLabel;
 	private JLabel bottomLabel;
 	
@@ -23,27 +23,33 @@ public class MyGrid{
 
 	private void prepareGui() {
 		
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		int height = screenSize.height;
-		int width = screenSize.width;
+		int rows = getRandomNum();
+		int columns = getRandomNum();
 		
-		mainFrame = new JFrame("Column and Rows Example");
+		frm = new JFrame("Column and Rows Example");
+		frm.setSize((rows*50), (rows*50) + 80);
+		frm.setLocationRelativeTo(null);
+		frm.setLayout(new BorderLayout());
 		
-		//set size of Frame. have to cast to int for it to work
-		mainFrame.setSize(900, 250);
-		mainFrame.setLocationRelativeTo(null);
-		mainFrame.setLayout(new BorderLayout());
+		topLabel = new JLabel("Basic Matrix Demo", JLabel.CENTER);
+		bottomLabel = new JLabel("No Seat Selected", JLabel.CENTER);
 		
-		topLabel = new JLabel("", JLabel.CENTER);
-		bottomLabel = new JLabel("", JLabel.CENTER);
+		panel = new JPanel();
+		panel.setLayout(new GridLayout(rows, columns));		
 		
-		controlPanel = new JPanel();
-		controlPanel.setLayout(new FlowLayout());
-		//controlPanel.setLayout(new BoxLayout(controlPanel, BoxLayout.Y_AXIS));
-		
+		for(int i=0; i < rows; i++) {
+			for(int j=0; j < columns; j++) {
+				panel.add(new Cell(bottomLabel, i+1, j+1));
+			}
+		}
+
+		frm.add(topLabel, BorderLayout.NORTH);
+		frm.add(panel, BorderLayout.CENTER);
+		frm.add(bottomLabel, BorderLayout.SOUTH);
+		frm.setVisible(true);
 		
 		// old school way to close a window
-		mainFrame.addWindowListener(new WindowAdapter() {
+		frm.addWindowListener(new WindowAdapter() {
 	         public void windowClosing(WindowEvent windowEvent){
 	             // this is the way to force a java application to gracefully exit
 	        	 // when not going to end via the main method entry point
@@ -51,48 +57,8 @@ public class MyGrid{
 	         }        
 	    }); 
 		
-		
-		mainFrame.add(topLabel, BorderLayout.NORTH);
-		mainFrame.add(controlPanel, BorderLayout.CENTER);
-		mainFrame.add(bottomLabel, BorderLayout.SOUTH);
-		mainFrame.setVisible(true);
-		
 	}//end prepareGui
 	
-	
-	
-	public void showGui(){
-		
-		int rows = getRandomNum();
-		int columns = getRandomNum();
-		
-		
-		topLabel.setText("Basic Matrix Demo");
-		bottomLabel.setText("No seat selected");
-		
-		JPanel panel = new JPanel();
-		//panel.setSize(100, 100);
-		GridLayout layout = new GridLayout(rows, columns);
-		panel.setLayout(layout);
-		//panel.setLayout(new BoxLayout());
-		
-		System.out.println("Rows: " + rows);
-		System.out.println("Cols: " + columns);
-
-		for(int i=0; i < rows; i++) {
-
-			for(int j=0; j < columns; j++) {
-
-				panel.add(new Cell(panel, bottomLabel, i+1, j+1));
-				
-			}//end inner
-			
-		}//end outer
-		
-		controlPanel.add(panel);
-		mainFrame.setVisible(true);
-		
-	}//end showGui
 	
 
 	public static int getRandomNum() {

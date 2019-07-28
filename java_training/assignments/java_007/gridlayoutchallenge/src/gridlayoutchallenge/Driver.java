@@ -10,8 +10,7 @@ public class Driver {
 		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				MyGrid grid = new MyGrid();  
-			    grid.showGui();
+				new MyGrid();  
 			}
 		});   
 		

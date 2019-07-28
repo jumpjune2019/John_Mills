@@ -4,38 +4,29 @@ import javax.swing.*;
 
 public class Cell extends JPanel{
 
-	JPanel panel;
-	JLabel bottomLabel;
 	JButton button;
+	JLabel label;
 	int rows, columns;
 	
 
 	//this looks like absolute garbage, but it works
 	//I will refactor code later when I can
 	//It is too late to do this now and I need sleep
-	public Cell(JPanel panel, JLabel bottomLabel, int rows, int columns) {
+	public Cell(JLabel bottomLabel, int rows, int columns) {
 		
-		this.bottomLabel = bottomLabel;
-		//message = input;
+		this.rows = rows;
+		this.columns = columns;
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		String input = getCharForNumber(rows) + "-" + Integer.toString(columns);
-		JButton button = new JButton(input);
-		JLabel label = new JLabel(input);
-
-		JPanel myPanel = new JPanel();
-		//myPanel.setSize(1, 1);
+		button = new JButton(input);
+		label = new JLabel(input);
 		
 		button.addActionListener((ae) ->{
 			bottomLabel.setText(label.getText());
 		});
 
-		myPanel.add(label);
-		myPanel.add(button);
-		//myPanel.setLayout(new BoxLayout(m, BoxLayout.Y_AXIS));
-
-//		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-//		panel.add(label);
-//		panel.add(button);
-		panel.add(myPanel);
+		this.add(label);
+		this.add(button);
 		
 	}
 	
