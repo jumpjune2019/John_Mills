@@ -1,0 +1,29 @@
+import javax.swing.SwingUtilities;
+
+public class Main {
+
+	
+	//Client[] myStore = new ClientStore("clients_lists.csv");
+	public static void main(String[] args) {
+		
+		Client clientList[] = getInput();
+		
+		//DriverGui grid = new DriverGui(clientList);
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				new DriverGui(clientList);
+			}
+		});
+		
+		
+	}//end main
+	
+
+	public static Client[] getInput() {
+
+		ClientStore myStore = new ClientStore("clients_list.csv");		
+		return myStore.getClientStore();
+		
+	}//end getInput			
+	
+}

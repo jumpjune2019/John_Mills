@@ -1,0 +1,14 @@
+package proofofconcepts;
+
+public class IntToString {
+
+	public static void main(String[] args) {
+		
+		int one = 23;
+		String str = Character.toString(one);
+		System.out.println(str);
+		
+		
+	}//end main
+	
+}

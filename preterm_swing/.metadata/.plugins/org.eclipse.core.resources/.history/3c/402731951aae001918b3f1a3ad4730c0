@@ -1,0 +1,84 @@
+package grid;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class DriverGui{
+
+	JFrame frm;
+	JLabel left;
+	JLabel bottom;
+	JLabel top;
+	
+	/*
+	 * TODO
+	 * This is going to be a bitch. Create a grid with
+	 * id: 01/JM or "vacant" on top with a button that
+	 * says book or unbook depending on availability
+	 * already started with class MyCells to make this happen
+	 */
+	MyCell cell;
+	JPanel gridPanel;
+	
+	
+	
+	public DriverGui() {
+		prepareGUI();
+	}
+	
+	
+	private void prepareGUI() {
+		
+		frm = new JFrame("Big matrices go uWu");
+		
+		//TODO
+		//this is a placeholder until i know
+		//what size this needs to be
+		frm.setSize(1000, 400);
+		frm.setLocationRelativeTo(null);
+		frm.setLayout(new BorderLayout());
+		
+		gridPanel = new JPanel(new GridLayout(10, 10));
+		
+		
+		//creating top label
+		top = new JLabel("top");
+		top.setAlignmentX(JLabel.CENTER);
+		top.setAlignmentY(JLabel.CENTER);
+		
+		
+		//creating bottom label
+		bottom = new JLabel("bottom");
+		bottom.setAlignmentX(JLabel.CENTER);
+		bottom.setAlignmentY(JLabel.CENTER);
+		
+		
+		//created left label
+		left = new JLabel("left");
+		
+		
+		//adding one cell
+		//cell = new MyCell();
+		for(int i=0; i < 100; i++) {
+			gridPanel.add(new MyCell());
+		}
+		
+		
+		frm.add(top, BorderLayout.NORTH);
+		frm.add(left, BorderLayout.WEST);
+		frm.add(bottom, BorderLayout.SOUTH);
+		frm.add(cell, BorderLayout.EAST);
+		frm.setVisible(true);
+		
+		//kills program after gui is exited
+		frm.addWindowListener(new WindowAdapter() {
+	         public void windowClosing(WindowEvent windowEvent){
+	        	 System.exit(0);
+	         }        
+	      }); 
+		
+	}//end prepareGUI
+	
+}//end class MyGrid

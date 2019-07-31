@@ -1,0 +1,136 @@
+import java.util.*;
+public class Room {
+
+	private Seat[][] mySeats;
+	private int roomNumber;
+	private Client[] clientList;
+	
+	
+	//TODO
+	//hardcoding seats in just for testing
+	//will dynamically input seats later down the line
+	public Room(int roomNumber, Client[] clientList) {
+		this.roomNumber = roomNumber;
+		mySeats = new Seat[10][10];
+		this.clientList = clientList;
+		populateSeats();
+	}
+	
+	int getRoomNumber() {
+		return roomNumber;
+	}
+	
+	Seat[][] getMySeats(){
+		return mySeats;
+	}
+	
+	void setMySeats(Seat[][] arr) {
+		mySeats = arr;
+	}
+	
+	//this should never be called
+	void setRoomNumber(int roomNumber) {
+		this.roomNumber = roomNumber;
+	}
+	
+	
+	void populateSeats() {
+		
+		Random rand = new Random();
+		int count = 0;
+		int firstIndex = rand.nextInt(10);
+		int secondIndex = rand.nextInt(10);
+		String intToStr;
+		Seat currentSeat;
+		Client currentClient = clientList[0];
+		
+		
+		for(int i=0; i < 25; i++) {
+		
+			while(mySeats[firstIndex][secondIndex] != null) {
+				
+				firstIndex = rand.nextInt(10);
+				secondIndex = rand.nextInt(10);
+				
+			}//end while
+
+			intToStr = Character.toString(firstIndex);
+			currentSeat = new Seat(intToStr, secondIndex, currentClient);
+			currentClient.setSeat(currentSeat);
+			
+			mySeats[firstIndex][secondIndex] = currentSeat;
+			if(count < 24) {
+				count++;
+			}
+			currentClient = clientList[count];
+			
+			
+		}//end for loop
+		
+		
+		
+		
+	}//end populateSeats
+	
+	
+	//TODO
+	//come back and change the loops from 10
+	//do whatever the dynamic
+	void printSeats() {
+		
+		Client current;
+		String vacant = "vacant";
+		System.out.print("      ");
+		for(int i=1; i < 11; i++) {
+			System.out.format("%-12s", "| Seat " + i);
+		}
+		System.out.println("\n");
+		
+		for(int i=0; i < 10; i++) {
+			
+			//System.out.print("Row " + getCharForNumber(i+1) + " ");
+			System.out.format("%-5s", "Row " + getCharForNumber(i+1) + " ");
+
+			for(int j=0; j < 10; j++) {
+				
+
+				if(mySeats[i][j] != null) {
+					current = mySeats[i][j].getClient();
+					//System.out.print(current.getClientInitials() + " || " );
+					System.out.format("%-12s", "| " + current.getClientIdandInit());
+				}else {
+					//System.out.print("VACANT || ");
+					System.out.format("%-12s", "| " + vacant);
+				}
+				
+			}//end inner loop
+			
+			System.out.println("\n");
+
+			
+		}//end outer for
+		
+	}//end printSeats
+	
+	
+	//TODO
+	//change the 25 to whatever size in the future
+	//when next assignment is given
+	void printAssignments() {
+		
+		System.out.format("%10s", "Client", "ID", "Seat Numer");
+		
+		for(int i=0; i < 25; i++) {
+			
+			System.out.format("%10s", clientList[i].getClientName(), clientList[i].getClientId(), clientList[i].getClientSeatId());
+			System.out.println();
+			
+		}
+		
+	}
+	
+	public static String getCharForNumber(int i) {
+	    return i > 0 && i < 27 ? String.valueOf((char)(i + 64)) : null;
+	}
+
+}//end Room

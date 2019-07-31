@@ -1,0 +1,15 @@
+
+public class Seat {
+
+	String rowIndex;
+	int seatIndex;
+	Client currentClient;
+	
+	
+	public Seat() {
+		
+	}
+	
+	
+	
+}

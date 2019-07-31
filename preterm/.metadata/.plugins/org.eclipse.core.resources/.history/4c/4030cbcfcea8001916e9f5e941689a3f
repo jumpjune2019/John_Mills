@@ -1,0 +1,20 @@
+package proofofconcepts;
+
+public class IntToString {
+
+	public static void main(String[] args) {
+		
+		int one = 1;
+		String str = getCharForNumber(one);
+		System.out.println(str);
+		
+		
+	}//end main
+
+	
+	public static String getCharForNumber(int i) {
+	    return i > 0 && i < 27 ? String.valueOf((char)(i + 64)) : null;
+	}
+	
+	
+}

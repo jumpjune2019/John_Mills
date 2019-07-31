@@ -1,0 +1,110 @@
+
+
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+/*
+ * TODO
+ * The buttons need different functionality in the end
+ * these are just for testing for the grid layout
+ * 
+ */
+
+@SuppressWarnings("serial")
+public class AddOrRemovePanel extends JPanel implements ActionListener {
+
+	JButton resetMatrix;
+	JButton printToConsole;
+	MyList myList;
+	RowColumnLayout rowAndColumn;
+	
+	public AddOrRemovePanel(MyList myList, RowColumnLayout rowAndColumn){
+		
+		this.rowAndColumn = rowAndColumn;
+		this.myList = myList;
+		resetMatrix = new JButton("Reset Entire Matrix");
+		printToConsole = new JButton("Print Assigned Seats in Console");
+		resetMatrix.addActionListener(this);
+		printToConsole.addActionListener(this);
+		this.add(resetMatrix);
+		this.add(printToConsole);
+		
+	}
+	
+	private void printSeatsToConsole() {
+		
+		Component myPanel = rowAndColumn.getComponent(2);
+		Component iter;
+		MyCell myCell;
+		Client myClient;
+		
+		System.out.format("%-30s", "Client");
+		System.out.format("%-10s", "ID");
+		System.out.format("%-5s", "Seat Number");
+		System.out.println();
+		
+		for(int i=0; i < 100; i++) {
+			iter = ((Container) myPanel).getComponent(i);
+			myCell = (MyCell) iter;
+			
+			if(myCell.myClient != null) {
+				
+				myClient = myCell.myClient;
+				System.out.format("%-30s", myClient.getClientName());
+				System.out.format("%-10s", myClient.getClientId());
+				System.out.format("%-10s", getCharForNumber((myCell.i)+1) + "-" + (myCell.j+1)%11);
+				System.out.println();
+			}
+			
+		}//end for		
+		
+		
+	}//end printSeatsToConsole
+	
+	
+	private void deleteRoom() {
+		
+		DefaultListModel<Client> tempList = myList.getDefaultList();
+		Component myPanel = rowAndColumn.getComponent(2);
+		Component iter;
+		MyCell myCell;
+		
+		for(int i=0; i < 100; i++) {
+			iter = ((Container) myPanel).getComponent(i);
+			myCell = (MyCell) iter;
+			if(myCell.myClient != null) {
+				tempList.addElement(myCell.myClient);
+				myCell.button.setText("   Book  ");
+				myCell.label.setText("Vacant");
+				myCell.myClient = null;
+			}
+		}//end for
+		
+	}//end deleteRoom
+	
+	/*
+	 * TODO
+	 * currently testing the functionality of it
+	 * go back and print off correct stuff when
+	 * the time comes
+	 */
+	@Override
+	public void actionPerformed(ActionEvent ae) {
+		
+		if(ae.getActionCommand().equals("Reset Entire Matrix")) {
+			//System.out.println("Added");
+				deleteRoom();
+		}else {
+			printSeatsToConsole();		
+		}
+		
+	}//end actionPerformed
+
+	public static String getCharForNumber(int i) {
+	    return i > 0 && i < 27 ? String.valueOf((char)(i + 64)) : null;
+	}
+	
+}//end class AddOrRemove

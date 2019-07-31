@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\java_training\preterm_swing\.metadata\.plugins\org.eclipse.jdt.core
+1603072497.index
+117774581.index
+2531755735.index

@@ -1,0 +1,70 @@
+package grid;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class DriverGui{
+
+	JFrame frm;
+	JLabel left;
+	JLabel bottom;
+	JLabel top;
+	
+	/*
+	 * TODO
+	 * This is going to be a bitch. Create a grid with
+	 * id: 01/JM or "vacant" on top with a button that
+	 * says book or unbook depending on availability
+	 * already started with class MyCells to make this happen
+	 */
+	MyGrid grid;
+	JPanel panel;
+	
+	
+	
+	public DriverGui() {
+		prepareGUI();
+	}
+	
+	
+	private void prepareGUI() {
+		
+		frm = new JFrame("Big matrices go uWu");
+		
+		//TODO
+		//this is a placeholder until i know
+		//what size this needs to be
+		frm.setSize(1000, 400);
+		frm.setLocationRelativeTo(null);
+		frm.setLayout(new BorderLayout());
+		//panel = new 
+		
+		top = new JLabel("top");
+		top.setAlignmentX(JLabel.CENTER);
+		top.setAlignmentY(JLabel.CENTER);
+		
+		bottom = new JLabel("bottom");
+		bottom.setAlignmentX(JLabel.CENTER);
+		bottom.setAlignmentY(JLabel.CENTER);
+		
+		left = new JLabel("left");
+		
+		
+		
+		grid = new MyGrid();
+		
+		frm.add(grid, BorderLayout.CENTER);
+		frm.setVisible(true);
+		
+		//kills program after gui is exited
+		frm.addWindowListener(new WindowAdapter() {
+	         public void windowClosing(WindowEvent windowEvent){
+	        	 System.exit(0);
+	         }        
+	      }); 
+		
+	}//end prepareGUI
+	
+}//end class MyGrid

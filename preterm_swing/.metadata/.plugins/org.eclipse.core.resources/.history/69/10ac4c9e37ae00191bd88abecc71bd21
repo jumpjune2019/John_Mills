@@ -1,0 +1,58 @@
+package matrixinput;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class RowColumnLayout extends JPanel{
+
+	
+	JPanel seatPanel;			//will be flowlayout
+	JPanel rowPanel;			//will be boxlayout
+	JPanel gridPanel;			//will be gridlayout
+	
+	public RowColumnLayout(){
+		
+		this.setLayout(new BorderLayout());
+		prepareRowAndColumn();
+		
+	}
+	
+	private void prepareRowAndColumn() {
+		
+		gridPanel = new JPanel(new GridLayout(10, 10));
+		for(int i=0; i < 10; i++) {
+			for(int j=0; j < 10; j++) {
+				gridPanel.add(new MyCell(i, j));
+			}
+		}//end outer for
+		
+		//creating each new panel
+		seatPanel = new JPanel(new FlowLayout());
+		rowPanel = new JPanel();
+		rowPanel.setLayout(new BoxLayout(rowPanel, BoxLayout.Y_AXIS));
+		
+		//adding Seat numbers and row numbers to each panel
+		for(int i=0; i < 10; i++) {
+			seatPanel.add(new JLabel("Seat " + (i+1)));
+			seatPanel.add(Box.createRigidArea(new Dimension(45, 0)));
+
+			rowPanel.add(new JLabel("Row " + getCharForNumber(i+1)));
+			rowPanel.add(Box.createRigidArea(new Dimension(0, 55)));
+
+		}
+				
+		
+		//adding all sub panels to overarching panel
+		this.add(seatPanel, BorderLayout.NORTH);
+		this.add(rowPanel, BorderLayout.WEST);
+		this.add(gridPanel, BorderLayout.CENTER);
+		
+	}//end prepareRow
+	
+	private static String getCharForNumber(int i) {
+	    return i > 0 && i < 27 ? String.valueOf((char)(i + 64)) : null;
+	}
+	
+	
+}//end class RowColumnLayout
